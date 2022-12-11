@@ -1,0 +1,15 @@
+.btn-primary {
+  width: 11.51vw;
+  height: 2.396vw;
+  //padding: 0.625vw 2.083vw 0.521vw 2.083vw;
+  font-size: 0.938vw;
+  border: 1px solid var(--main-red);
+  border-radius: 2.76vw;
+  transition: all 0.25s ease-in;
+  @include for-desktop {
+    &:hover {
+      color: var(--light-color);
+      background-color: var(--main-red);
+    }
+  }
+}

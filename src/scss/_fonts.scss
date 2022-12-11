@@ -1,0 +1,30 @@
+//Alumni Sans
+@include font-face("AlumniSans", "../fonts/AlumniSans-Regular", 400, normal);
+@include font-face("AlumniSans", "../fonts/AlumniSans-Medium", 500, normal);
+@include font-face("AlumniSans", "../fonts/AlumniSans-SemiBold", 600, normal);
+
+//Helvetica
+@include font-face(
+  "HelveticaNeue",
+  "../fonts/HelveticaNeueCyr-Light",
+  300,
+  normal
+);
+@include font-face(
+  "HelveticaNeue",
+  "../fonts/HelveticaNeueCyr-Regular",
+  400,
+  normal
+);
+@include font-face(
+  "HelveticaNeue",
+  "../fonts/HelveticaNeueCyr-Medium",
+  500,
+  normal
+);
+@include font-face(
+  "HelveticaNeue",
+  "../fonts/HelveticaNeueCyr-Bold",
+  700,
+  normal
+);
