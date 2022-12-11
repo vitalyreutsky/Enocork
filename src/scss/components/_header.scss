@@ -21,7 +21,7 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      z-index: 100;
+      z-index: 1;
     }
     &::before {
       content: "";
@@ -34,7 +34,7 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      z-index: 100;
+      z-index: 1;
     }
   }
 
@@ -50,6 +50,8 @@
 }
 
 .nav {
+  position: relative;
+  z-index: 2;
   &__list {
     display: flex;
   }
@@ -68,6 +70,8 @@
 .lang {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 2;
   svg {
     width: 1.25vw;
     height: 1.25vw;
