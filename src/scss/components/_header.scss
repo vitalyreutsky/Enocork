@@ -1,8 +1,41 @@
 .header {
-   padding: 1.667vw 0vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.667vw 0vw;
+  background-color: #f2f2f2;
+  z-index: 3;
   &__container {
     display: flex;
     align-items: center;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1.3vw;
+      right: -2.65vw;
+      width: 6.719vw;
+      height: 8.854vw;
+      background-image: url("../img/header-decor-right.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 100;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1.3vw;
+      left: -2.65vw;
+      width: 6.719vw;
+      height: 8.854vw;
+      background-image: url("../img/header-decor-left.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 100;
+    }
   }
 
   &__logo {
