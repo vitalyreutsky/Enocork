@@ -36,6 +36,11 @@ a {
   color: inherit;
 }
 
+body,
+html {
+  height: 100%;
+}
+
 .page {
   background-color: #f2f2f2;
   height: 100%;
