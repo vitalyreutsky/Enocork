@@ -1,0 +1,116 @@
+.social__wrapper {
+  position: fixed;
+  top: 40%;
+  right: 1.3vw;
+  z-index: 10;
+}
+.social__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.042vw;
+}
+
+.social__link {
+  width: 2.604vw;
+  height: 2.604vw;
+  border-radius: 2.604vw;
+  transition: all 0.25s ease-in;
+  background-color: #f5f5f5;
+  float: left;
+  overflow: hidden;
+}
+
+.social__title {
+  display: block;
+  font-size: 0.729vw;
+  line-height: 1.146vw;
+  font-weight: 400;
+  color: var(--light-color);
+  transform: rotate(-90deg);
+  transition: all 0.25s ease-in;
+  white-space: nowrap;
+}
+
+.social__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.604vw;
+  height: 2.604vw;
+  background-color: #f5f5f5;
+  border-radius: 2.604vw;
+  transition: all 0.25s ease-in;
+  svg {
+    width: 1.042vw;
+    height: 1.042vw;
+    fill: #3f3f3f;
+    transition: all 0.25s ease-in;
+  }
+}
+
+@include for-desktop {
+  .social__link--phone:hover {
+    height: 9.167vw;
+    background: #a12b4e;
+    .social__icon {
+      background: #a12b4e;
+      svg {
+        fill: var(--light-color);
+      }
+    }
+  }
+
+  .social__link--mail:hover {
+    height: 8.281vw;
+    background: #a12b4e;
+    .social__icon {
+      background: #a12b4e;
+      svg {
+        fill: var(--light-color);
+      }
+    }
+  }
+
+  .social__link--whatsapp:hover {
+    height: 6.979vw;
+    background: #4ba586;
+    .social__icon {
+      background: #4ba586;
+      svg {
+        fill: var(--light-color);
+      }
+    }
+  }
+
+  .social__link--telegram:hover {
+    height: 6.615vw;
+    background: #419fd9;
+    .social__icon {
+      background: #419fd9;
+      svg {
+        fill: var(--light-color);
+      }
+    }
+  }
+}
+
+.social__link--phone {
+  .social__title {
+    margin-top: 3.7vw;
+  }
+}
+.social__link--mail {
+  .social__title {
+    margin-top: 3vw;
+  }
+}
+.social__link--whatsapp {
+  .social__title {
+    margin-top: 1.3vw;
+  }
+}
+.social__link--telegram {
+  .social__title {
+    margin-top: 1vw;
+  }
+}
