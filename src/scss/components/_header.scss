@@ -8,6 +8,7 @@
   z-index: 3;
   &__container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     &::after {
@@ -39,13 +40,14 @@
   }
 
   &__logo {
-    margin: 0 auto;
+    margin-left: 15.573vw;
+    margin-right: 21.042vw;
     width: 12.135vw;
     height: auto;
   }
 
   &__btn {
-    margin-right: 4.479vw;
+    margin-right: 4.5vw;
   }
 }
 
@@ -58,7 +60,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 2.083vw;
+      margin-right: 2.11vw;
     }
   }
 
