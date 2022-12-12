@@ -1,0 +1,111 @@
+<div class="graph-modal modal">
+  <div
+    class="graph-modal__container modal__container modal-consultation"
+    role="dialog"
+    aria-modal="true"
+    data-graph-target="modal-consultation"
+  >
+    <button
+      class="btn-reset js-modal-close graph-modal__close modal-close"
+      aria-label="Закрыть модальное окно"
+    ></button>
+    <div class="graph-modal__content modal-content">
+      <div class="modal-content__form">
+        <h3 class="modal-content__title">Нужна консультация?</h3>
+        <p class="modal-content__text">
+          Оставьте заявку, мы <span>быстро перезвоним</span> и ответим на все
+          вопросы
+        </p>
+        <form class="form">
+          <label class="form__label">
+            <input
+              type="text"
+              name="Имя"
+              class="input-reset form__input form__input--user"
+              placeholder="Ваше Имя"
+            />
+          </label>
+          <label class="form__label">
+            <input
+              type="tel"
+              name="Телефон"
+              class="input-reset form__input form__input--phone"
+              placeholder="Ваш Телефон"
+            />
+          </label>
+          <button class="btn-reset btn-primary form__btn">
+            Заказать звонок
+          </button>
+        </form>
+        <p class="form__text">
+          Нажимая кнопку “Заказать звонок” Вы даете согласие на обработку ваших
+          персональных данных
+        </p>
+      </div>
+      <div class="modal-content__image">
+        <picture>
+          <source srcset="img/modal-consultation.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/modal-consultation.png"
+            class="image"
+            alt="Modal image"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="graph-modal__container modal__container modal-feedback"
+    role="dialog"
+    aria-modal="true"
+    data-graph-target="modal-feedback"
+  >
+    <button
+      class="btn-reset js-modal-close graph-modal__close modal-close"
+      aria-label="Закрыть модальное окно"
+    ></button>
+    <div class="graph-modal__content modal-content">
+      <div class="modal-content__form">
+        <h3 class="modal-content__title">Оставить заявку</h3>
+        <p class="modal-content__text">
+          Оставьте заявку, мы <span>быстро ответим</span> на все вопросы
+        </p>
+        <form class="form">
+          <label class="form__label">
+            <input
+              type="tel"
+              name="Телефон"
+              class="input-reset form__input form__input--phone"
+              placeholder="Ваш Телефон"
+            />
+          </label>
+          <label class="form__label">
+            <textarea class="input-reset form__textarea">
+Ваш вопрос (не обязательно)</textarea
+            >
+          </label>
+          <button class="btn-reset btn-primary form__btn">
+            Оставить заявку
+          </button>
+        </form>
+        <p class="form__text">
+          Нажимая кнопку “Оставить заявку” Вы даете согласие на обработку ваших
+          персональных данных
+        </p>
+      </div>
+      <div class="modal-content__image">
+        <picture>
+          <source srcset="img/modal-feedback.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/modal-feedback.png"
+            class="image"
+            alt="Modal image"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
