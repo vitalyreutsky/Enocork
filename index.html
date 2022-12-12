@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>Enocork</title>
+  <link
+    rel="preload"
+    href="fonts/HelveticaNeueCyr-Regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script defer src="js/main.js"></script>
+</head>
+
+  <body class="page__body">
+    <div class="site-container">
+      <header class="header">
+  <div class="container header__container">
+    <nav class="nav">
+      <ul class="nav__list list-reset">
+        <li class="nav__item">
+          <a href="#" class="nav__link">Главная</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Каталог</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">О компании</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <a href="#" class="header__logo">
+      <picture>
+        <source srcset="img/logo.webp" type="image/webp" />
+        <img loading="lazy" src="img/logo.png" class="image" alt="Logo" />
+      </picture>
+    </a>
+    <button
+      class="header__btn btn-primary btn-reset"
+      data-graph-path="modal-consultation"
+      data-graph-animation="fadeInUp"
+    >
+      Обратный звонок
+    </button>
+    <div class="header__lang lang">
+      <svg>
+        <use xlink:href="img/sprite.svg#lang"></use>
+      </svg>
+      <span>EN</span>
+    </div>
+  </div>
+</header>
+ <aside class="social">
+  <div class="social__wrapper">
+    <ul class="social__list list-reset">
+      <a
+        href="#"
+        target="_blank"
+        class="social__link social__link--phone"
+        aria-label="Наш телефон"
+      >
+        <div class="social__icon">
+          <svg>
+            <use xlink:href="img/sprite.svg#phone"></use>
+          </svg>
+        </div>
+        <span class="social__title">Заказать звонок</span>
+      </a>
+
+      <li class="social__item">
+        <a
+          href="#"
+          target="_blank"
+          class="social__link social__link--mail"
+          aria-label="Наша почта"
+        >
+          <div class="social__icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#mail"></use>
+            </svg>
+          </div>
+          <span class="social__title">Напишите нам</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a
+          href="#"
+          target="_blank"
+          class="social__link social__link--whatsapp"
+          aria-label="Мы в Whatsapp"
+        >
+          <div class="social__icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#whatsapp"></use>
+            </svg>
+          </div>
+          <span class="social__title">Whatsapp</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a
+          href="#"
+          target="_blank"
+          class="social__link social__link--telegram"
+          aria-label="Мы в Telegram"
+        >
+          <div class="social__icon">
+            <svg>
+              <use xlink:href="img/sprite.svg#telegram"></use>
+            </svg>
+          </div>
+          <span class="social__title">Telegram</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+
+      <div class="graph-modal modal">
+  <div
+    class="graph-modal__container modal__container modal-consultation"
+    role="dialog"
+    aria-modal="true"
+    data-graph-target="modal-consultation"
+  >
+    <button
+      class="btn-reset js-modal-close graph-modal__close modal-close"
+      aria-label="Закрыть модальное окно"
+    ></button>
+    <div class="graph-modal__content modal-content">
+      <div class="modal-content__form">
+        <h3 class="modal-content__title">Нужна консультация?</h3>
+        <p class="modal-content__text">
+          Оставьте заявку, мы <span>быстро перезвоним</span> и ответим на все
+          вопросы
+        </p>
+        <form class="form">
+          <label class="form__label">
+            <input
+              type="text"
+              name="Имя"
+              class="input-reset form__input form__input--user"
+              placeholder="Ваше Имя"
+            />
+          </label>
+          <label class="form__label">
+            <input
+              type="tel"
+              name="Телефон"
+              class="input-reset form__input form__input--phone"
+              placeholder="Ваш Телефон"
+            />
+          </label>
+          <button class="btn-reset btn-primary form__btn">
+            Заказать звонок
+          </button>
+        </form>
+        <p class="form__text">
+          Нажимая кнопку «Заказать звонок» Вы даете согласие на обработку ваших
+          персональных данных
+        </p>
+      </div>
+      <div class="modal-content__image">
+        <picture>
+          <source srcset="img/modal-consultation.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/modal-consultation.png"
+            class="image"
+            alt="Modal image"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="graph-modal__container modal__container modal-feedback"
+    role="dialog"
+    aria-modal="true"
+    data-graph-target="modal-feedback"
+  >
+    <button
+      class="btn-reset js-modal-close graph-modal__close modal-close"
+      aria-label="Закрыть модальное окно"
+    ></button>
+    <div class="graph-modal__content modal-content">
+      <div class="modal-content__form">
+        <h3 class="modal-content__title">Оставить заявку</h3>
+        <p class="modal-content__text">
+          Оставьте заявку, мы <span>быстро ответим</span> на все вопросы
+        </p>
+        <form class="form">
+          <label class="form__label">
+            <input
+              type="tel"
+              name="Телефон"
+              class="input-reset form__input form__input--phone"
+              placeholder="Ваш Телефон"
+            />
+          </label>
+          <label class="form__label">
+            <textarea class="input-reset form__textarea">
+Ваш вопрос (не обязательно)</textarea
+            >
+          </label>
+          <button class="btn-reset btn-primary form__btn">
+            Оставить заявку
+          </button>
+        </form>
+        <p class="form__text">
+          Нажимая кнопку «Оставить заявку» Вы даете согласие на обработку ваших
+          персональных данных
+        </p>
+      </div>
+      <div class="modal-content__image">
+        <picture>
+          <source srcset="img/modal-feedback.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/modal-feedback.png"
+            class="image"
+            alt="Modal image"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <main class="main"><section class="hero">
+  <div class="container hero__container">
+    <div class="swiper hero-swiper">
+      <div class="swiper-wrapper hero-wrapper">
+        <div class="swiper-slide hero-slide">
+          <div class="hero-bg">
+            <picture>
+              <source srcset="img/hero-bg1.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/hero-bg1.png"
+                class="image"
+                alt="Background"
+              />
+            </picture>
+          </div>
+          <div class="hero-content">
+            <div class="hero-content__wrapper">
+              <div class="hero-content__text">
+                <h1 class="hero__title">Дубовые бочки</h1>
+                <h4 class="hero__subtitle">RADOUX</h4>
+              </div>
+              <p class="hero__text">Настоящее Французское качество</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide hero-slide">
+          <div class="hero-bg">
+            <picture>
+              <source srcset="img/hero-bg2.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/hero-bg2.png"
+                class="image"
+                alt="Background"
+              />
+            </picture>
+          </div>
+          <div class="hero-content">
+            <div class="hero-content__wrapper">
+              <div class="hero-content__text">
+                <h1 class="hero__title">Пробка для Чачи</h1>
+              </div>
+              <p class="hero__text">Простая или Декор</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide hero-slide">
+          <div class="hero-bg">
+            <picture>
+              <source srcset="img/hero-bg3.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/hero-bg3.png"
+                class="image"
+                alt="Background"
+              />
+            </picture>
+          </div>
+          <div class="hero-content">
+            <div class="hero-content__wrapper">
+              <div class="hero-content__text">
+                <h1 class="hero__title">Пробка для вина</h1>
+              </div>
+              <p class="hero__text">Пробка без ТСА из Португалии</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide hero-slide">
+          <div class="hero-bg">
+            <picture>
+              <source srcset="img/hero-bg4.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/hero-bg1.png"
+                class="image"
+                alt="Background"
+              />
+            </picture>
+          </div>
+          <div class="hero-content">
+            <div class="hero-content__wrapper">
+              <div class="hero-content__text">
+                <h1 class="hero__title">Дубовая Клепка</h1>
+              </div>
+              <p class="hero__text">Премиальная клепка Pronektar из Франции</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide hero-slide">
+          <div class="hero-bg">
+            <picture>
+              <source srcset="img/hero-bg5.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/hero-bg5.png"
+                class="image"
+                alt="Background"
+              />
+            </picture>
+          </div>
+          <div class="hero-content">
+            <div class="hero-content__wrapper">
+              <div class="hero-content__text">
+                <h1 class="hero__title">Дубовая Щепа</h1>
+              </div>
+              <p class="hero__text">Премиальная щепа Pronektar из Франции</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide hero-slide">
+          <div class="hero-bg">
+            <picture>
+              <source srcset="img/hero-bg6.webp" type="image/webp" />
+              <img
+                loading="lazy"
+                src="img/hero-bg6.png"
+                class="image"
+                alt="Background"
+              />
+            </picture>
+          </div>
+          <div class="hero-content">
+            <div class="hero-content__wrapper">
+              <div class="hero-content__text">
+                <h1 class="hero__title">Оборудование для произвоства</h1>
+              </div>
+              <p class="hero__text">Франция</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-btns">
+        <div class="slider-prev">
+          <svg>
+            <use xlink:href="img/sprite.svg#left"></use>
+          </svg>
+        </div>
+        <div class="slider-next">
+          <svg>
+            <use xlink:href="img/sprite.svg#right"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="hero-swiper__pagination">
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+      <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+    </div>
+  </body>
+</html>
