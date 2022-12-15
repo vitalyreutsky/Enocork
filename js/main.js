@@ -11,8 +11,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/swiper */ "./src/js/components/swiper.js");
 /* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/modal */ "./src/js/components/modal.js");
-/* harmony import */ var _components_swiper_btns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/swiper-btns */ "./src/js/components/swiper-btns.js");
-/* harmony import */ var _components_swiper_btns__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_swiper_btns__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_observer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/observer */ "./src/js/components/observer.js");
+/* harmony import */ var _components_observer__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_observer__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -146,13 +146,66 @@ const modal = new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]();
 
 /***/ }),
 
-/***/ "./src/js/components/swiper-btns.js":
-/*!******************************************!*\
-  !*** ./src/js/components/swiper-btns.js ***!
-  \******************************************/
+/***/ "./src/js/components/observer.js":
+/*!***************************************!*\
+  !*** ./src/js/components/observer.js ***!
+  \***************************************/
 /***/ (() => {
 
+const sectionBottles = document.querySelector(".bottles");
 
+//const workObserver = new IntersectionObserver(
+//  (entries, observer) => {
+//    const [entry] = entries;
+
+//    if (!entry.isIntersecting) return;
+
+//    const bottlesIcon2 = document.querySelector(".bottle2");
+//    const bottlesIcon3 = document.querySelector(".bottle3");
+//    const bottlesIcon4 = document.querySelector(".bottle4");
+
+//    bottlesIcon2.classList.add("bottle-animation2");
+//    bottlesIcon3.classList.add("bottle-animation3");
+//    bottlesIcon4.classList.add("bottle-animation4");
+
+//    observer.unobserve(sectionBottles);
+//  },
+
+//  {
+//    root: null,
+//    threshold: 0,
+//  }
+//);
+
+//workObserver.observe(sectionBottles);
+
+// устанавливаем настройки
+const options = {
+  // родитель целевого элемента - область просмотра
+  root: null,
+  // отступ снизу
+  rootMargin: "0px",
+  // процент пересечения - половина изображения
+  threshold: 1
+};
+// создаем наблюдатель
+const observer = new IntersectionObserver((entries, observer) => {
+  // для каждой записи-целевого элемента
+  entries.forEach(entry => {
+    // если элемент является наблюдаемым
+    if (entry.isIntersecting) {
+      // добавить ему CSS-класс
+      const bottlesIcon2 = document.querySelector(".bottle2");
+      const bottlesIcon3 = document.querySelector(".bottle3");
+      const bottlesIcon4 = document.querySelector(".bottle4");
+      bottlesIcon2.classList.add("bottle-animation2");
+      bottlesIcon3.classList.add("bottle-animation3");
+      bottlesIcon4.classList.add("bottle-animation4");
+    }
+  });
+}, options);
+// выбираем обьект слежения по классу
+observer.observe(sectionBottles);
 
 /***/ }),
 
@@ -212,14 +265,17 @@ const productsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".prod
 const btnNext = document.querySelector(".products-next");
 const btnPrev = document.querySelector(".products-prev");
 const activeSlide = document.querySelectorAll(".products-swiper__slide");
+const sectionSwiper = document.querySelector(".products-swiper__main");
 btnNext.addEventListener("click", () => {
   if (activeSlide[1].classList.contains("swiper-slide-active")) {
     document.querySelector(".products-descr").classList.add("add");
+    sectionSwiper.classList.add("addGrid");
   }
 });
 btnPrev.addEventListener("click", () => {
   if (activeSlide[0].classList.contains("swiper-slide-active")) {
     document.querySelector(".products-descr").classList.remove("add");
+    sectionSwiper.classList.remove("addGrid");
   }
 });
 

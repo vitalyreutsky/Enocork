@@ -641,7 +641,7 @@ html {
   width: 100%;
   padding: 1.667vw 0vw;
   background-color: #f2f2f2;
-  z-index: 3;
+  z-index: 5;
 }
 .header__container {
   display: -webkit-box;
@@ -908,10 +908,12 @@ html {
   transform: translateX(-100%);
 }
 
-.remove-transform {
-  -webkit-transform: translate(0) !important;
-  -ms-transform: translate(0) !important;
-  transform: translate(0) !important;
+.addGrid {
+  -ms-grid-row: 1 !important;
+  -ms-grid-row-span: 1 !important;
+  -ms-grid-column: 1 !important;
+  -ms-grid-column-span: 5 !important;
+  grid-area: 1/1/2/6 !important;
 }
 
 .products-descr {
@@ -929,18 +931,20 @@ html {
 }
 .products-descr__images {
   position: absolute;
-  top: 0;
-  left: -7vw;
-  width: 40vw;
-  height: 50vw;
+  top: -3vw;
+  left: -6vw;
+  width: 43vw;
+  height: 60vw;
 }
 .products-descr__content {
   position: relative;
   top: 2vw;
   padding-top: 1vw;
   padding-bottom: 3vw;
+  padding-right: 5vw;
   background-color: var(--light-color);
-  z-index: 1;
+  z-index: 5;
+  border-radius: 0% 100% 0% 100%/100% 34% 66% 0%;
 }
 .products-descr__title {
   margin-bottom: 1.458vw;
@@ -955,42 +959,158 @@ html {
 
 .bottles svg {
   display: block;
-  fill: transparent;
+  fill: var(--light-color);
   width: 100%;
   height: 100%;
   stroke: var(--main-red);
+  -webkit-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
 }
 
 .bottles svg:nth-child(1) {
   position: absolute;
   top: 0;
   left: 0;
-  stroke-width: 0.365vw;
-  opacity: 0.8;
+  stroke-width: 0.3vw;
+  stroke-opacity: 0.8;
+  z-index: 4;
 }
 
 .bottles svg:nth-child(2) {
   position: absolute;
-  top: 0;
-  left: 0;
-  stroke-width: 0.25vw;
-  opacity: 0.5;
+  top: 2vw;
+  left: 1.5vw;
+  -webkit-transform: rotate(13deg);
+  -ms-transform: rotate(13deg);
+  transform: rotate(13deg);
+  stroke-width: 0.1vw;
+  stroke-opacity: 0.5;
+  z-index: 3;
 }
 
 .bottles svg:nth-child(3) {
   position: absolute;
-  top: 0;
-  left: 0;
-  stroke-width: 0.25vw;
-  opacity: 0.3;
+  top: 4vw;
+  -webkit-transform: rotate(22deg);
+  -ms-transform: rotate(22deg);
+  transform: rotate(22deg);
+  left: 5vw;
+  stroke-width: 0.1vw;
+  stroke-opacity: 0.2;
+  z-index: 2;
 }
 
 .bottles svg:nth-child(4) {
   position: absolute;
-  top: 0;
-  left: 0;
-  stroke-width: 0.25vw;
-  opacity: 0.1;
+  top: 7vw;
+  left: 9vw;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+  stroke-width: 0.1vw;
+  stroke-opacity: 0.1;
+  z-index: 1;
+}
+
+@-webkit-keyframes bottle2 {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+  }
+  to {
+    -webkit-transform: rotate(13deg);
+    transform: rotate(13deg);
+    top: 2vw;
+    left: 1.5vw;
+  }
+}
+
+@keyframes bottle2 {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+  }
+  to {
+    -webkit-transform: rotate(13deg);
+    transform: rotate(13deg);
+    top: 2vw;
+    left: 1.5vw;
+  }
+}
+@-webkit-keyframes bottle3 {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+  }
+  to {
+    -webkit-transform: rotate(22deg);
+    transform: rotate(22deg);
+    top: 4vw;
+    left: 5vw;
+  }
+}
+@keyframes bottle3 {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+  }
+  to {
+    -webkit-transform: rotate(22deg);
+    transform: rotate(22deg);
+    top: 4vw;
+    left: 5vw;
+  }
+}
+@-webkit-keyframes bottle4 {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+  }
+  to {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    top: 7vw;
+    left: 9vw;
+  }
+}
+@keyframes bottle4 {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+  }
+  to {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    top: 7vw;
+    left: 9vw;
+  }
+}
+.bottle-animation2 {
+  -webkit-animation: bottle2 1s ease-in alternate;
+  animation: bottle2 1s ease-in alternate;
+}
+
+.bottle-animation3 {
+  -webkit-animation: bottle3 1s ease-in alternate;
+  animation: bottle3 1s ease-in alternate;
+}
+
+.bottle-animation4 {
+  -webkit-animation: bottle4 1s ease-in alternate;
+  animation: bottle4 1s ease-in alternate;
 }
 
 .products-swiper {
