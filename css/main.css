@@ -913,9 +913,6 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
   padding-left: 3vw;
   -webkit-transition: all 0.7s ease-in;
   -o-transition: all 0.7s ease-in;
@@ -923,23 +920,26 @@ html {
 }
 .products-descr__images {
   position: absolute;
-  top: -3vw;
-  left: -6vw;
-  width: 43vw;
-  height: 60vw;
+  top: -12vw;
+  left: 3vw;
 }
 .products-descr__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.458vw;
   position: relative;
-  top: 2vw;
+  top: 100%;
   padding-top: 1vw;
-  padding-bottom: 3vw;
+  padding-bottom: 4vw;
   padding-right: 5vw;
   background-color: var(--light-color);
   z-index: 5;
   border-radius: 0% 100% 0% 100%/100% 34% 66% 0%;
-}
-.products-descr__title {
-  margin-bottom: 1.458vw;
 }
 .products-descr__text {
   font-size: 1.458vw;
@@ -949,59 +949,50 @@ html {
   font-weight: 700;
 }
 
-.bottles svg {
+.bottle {
   display: block;
   fill: var(--light-color);
-  width: 100%;
-  height: 100%;
-  stroke: var(--main-red);
+  width: 23.615vw;
+  height: 60.677vw;
   -webkit-transition: all 0.25s ease-in;
   -o-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
 }
 
-.bottles svg:nth-child(1) {
+.bottle1 {
   position: absolute;
   top: 0;
   left: 0;
-  stroke-width: 0.3vw;
-  stroke-opacity: 0.8;
   z-index: 4;
 }
 
-.bottles svg:nth-child(2) {
+.bottle2 {
   position: absolute;
   top: 2vw;
-  left: 1.5vw;
+  left: 4vw;
   -webkit-transform: rotate(13deg);
   -ms-transform: rotate(13deg);
   transform: rotate(13deg);
-  stroke-width: 0.1vw;
-  stroke-opacity: 0.5;
   z-index: 3;
 }
 
-.bottles svg:nth-child(3) {
+.bottle3 {
   position: absolute;
   top: 4vw;
+  left: 9vw;
   -webkit-transform: rotate(22deg);
   -ms-transform: rotate(22deg);
   transform: rotate(22deg);
-  left: 5vw;
-  stroke-width: 0.1vw;
-  stroke-opacity: 0.2;
   z-index: 2;
 }
 
-.bottles svg:nth-child(4) {
+.bottle4 {
   position: absolute;
   top: 7vw;
-  left: 9vw;
+  left: 14vw;
   -webkit-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   transform: rotate(30deg);
-  stroke-width: 0.1vw;
-  stroke-opacity: 0.1;
   z-index: 1;
 }
 
@@ -1016,7 +1007,7 @@ html {
     -webkit-transform: rotate(13deg);
     transform: rotate(13deg);
     top: 2vw;
-    left: 1.5vw;
+    left: 3vw;
   }
 }
 
@@ -1031,7 +1022,7 @@ html {
     -webkit-transform: rotate(13deg);
     transform: rotate(13deg);
     top: 2vw;
-    left: 1.5vw;
+    left: 3vw;
   }
 }
 @-webkit-keyframes bottle3 {
@@ -1045,7 +1036,7 @@ html {
     -webkit-transform: rotate(22deg);
     transform: rotate(22deg);
     top: 4vw;
-    left: 5vw;
+    left: 8vw;
   }
 }
 @keyframes bottle3 {
@@ -1059,7 +1050,7 @@ html {
     -webkit-transform: rotate(22deg);
     transform: rotate(22deg);
     top: 4vw;
-    left: 5vw;
+    left: 8vw;
   }
 }
 @-webkit-keyframes bottle4 {
@@ -1073,7 +1064,7 @@ html {
     -webkit-transform: rotate(30deg);
     transform: rotate(30deg);
     top: 7vw;
-    left: 9vw;
+    left: 13vw;
   }
 }
 @keyframes bottle4 {
@@ -1087,7 +1078,7 @@ html {
     -webkit-transform: rotate(30deg);
     transform: rotate(30deg);
     top: 7vw;
-    left: 9vw;
+    left: 13vw;
   }
 }
 .bottle-animation2 {
@@ -1105,17 +1096,16 @@ html {
   animation: bottle4 1s ease-in alternate;
 }
 
-.products-swiper {
-  -webkit-transition: all 0.7s ease-in;
-  -o-transition: all 0.7s ease-in;
-  transition: all 0.7s ease-in;
-}
-.products-swiper__slide {
-  -webkit-transform: translateX(-14vw);
-  -ms-transform: translateX(-14vw);
-  transform: translateX(-14vw);
+.products-swiper__slide:first-child {
+  width: 36vw !important;
+  left: 0vw;
+  padding-top: 3vw;
+  padding-left: 9vw;
 }
 .products-swiper__content {
+  -webkit-transform: translateX(-8vw) !important;
+  -ms-transform: translateX(-8vw) !important;
+  transform: translateX(-8vw) !important;
   padding-top: 9vw;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1214,17 +1204,24 @@ html {
 .products-swiper__title {
   font-family: var(--font-family-Alumni);
   font-weight: 500;
-  font-size: 2.646vw;
+  font-size: 3.688vw;
   line-height: 3.646vw;
   color: var(--main-red);
   text-transform: uppercase;
 }
+.products-swiper__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.521vw;
+}
 .products-swiper__item {
   font-size: 1.146vw;
   line-height: 1.823vw;
-}
-.products-swiper__item:not(:last-child) {
-  margin-bottom: 0.521vw;
 }
 .products-swiper .slider-btns {
   position: absolute;

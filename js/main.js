@@ -152,33 +152,6 @@ const modal = new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]();
   \***************************************/
 /***/ (() => {
 
-const sectionBottles = document.querySelector(".bottles");
-
-//const workObserver = new IntersectionObserver(
-//  (entries, observer) => {
-//    const [entry] = entries;
-
-//    if (!entry.isIntersecting) return;
-
-//    const bottlesIcon2 = document.querySelector(".bottle2");
-//    const bottlesIcon3 = document.querySelector(".bottle3");
-//    const bottlesIcon4 = document.querySelector(".bottle4");
-
-//    bottlesIcon2.classList.add("bottle-animation2");
-//    bottlesIcon3.classList.add("bottle-animation3");
-//    bottlesIcon4.classList.add("bottle-animation4");
-
-//    observer.unobserve(sectionBottles);
-//  },
-
-//  {
-//    root: null,
-//    threshold: 0,
-//  }
-//);
-
-//workObserver.observe(sectionBottles);
-
 // устанавливаем настройки
 const options = {
   // родитель целевого элемента - область просмотра
@@ -198,14 +171,14 @@ const observer = new IntersectionObserver((entries, observer) => {
       const bottlesIcon2 = document.querySelector(".bottle2");
       const bottlesIcon3 = document.querySelector(".bottle3");
       const bottlesIcon4 = document.querySelector(".bottle4");
-      bottlesIcon2.classList.add("bottle-animation2");
-      bottlesIcon3.classList.add("bottle-animation3");
-      bottlesIcon4.classList.add("bottle-animation4");
+      bottlesIcon2.classList.toggle("bottle-animation2");
+      bottlesIcon3.classList.toggle("bottle-animation3");
+      bottlesIcon4.classList.toggle("bottle-animation4");
     }
   });
 }, options);
 // выбираем обьект слежения по классу
-observer.observe(sectionBottles);
+observer.observe(document.querySelector(".products-swiper"));
 
 /***/ }),
 
@@ -248,10 +221,11 @@ swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MOD
 const productsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".products-swiper", {
   slidesPerView: 2.5,
   slidesPerGroup: 1,
-  spaceBetween: 10,
+  spaceBetween: 0,
   autoHeight: false,
   centeredSlides: true,
   speed: 1000,
+  initialSlide: 1,
   loop: false,
   //keyboard: {
   //  enabled: true,
@@ -266,16 +240,18 @@ const btnNext = document.querySelector(".products-next");
 const btnPrev = document.querySelector(".products-prev");
 const activeSlide = document.querySelectorAll(".products-swiper__slide");
 const sectionSwiper = document.querySelector(".products-swiper__main");
-btnNext.addEventListener("click", () => {
-  if (activeSlide[1].classList.contains("swiper-slide-active")) {
-    document.querySelector(".products-descr").classList.add("add");
-  }
-});
-btnPrev.addEventListener("click", () => {
-  if (activeSlide[0].classList.contains("swiper-slide-active")) {
-    document.querySelector(".products-descr").classList.remove("add");
-  }
-});
+
+//btnNext.addEventListener("click", () => {
+//  if (activeSlide[1].classList.contains("swiper-slide-active")) {
+//    document.querySelector(".products-descr").classList.add("add");
+//  }
+//});
+
+//btnPrev.addEventListener("click", () => {
+//  if (activeSlide[0].classList.contains("swiper-slide-active")) {
+//    document.querySelector(".products-descr").classList.remove("add");
+//  }
+//});
 
 /***/ }),
 
