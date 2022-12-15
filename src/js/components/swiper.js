@@ -13,8 +13,8 @@ const heroSwiper = new Swiper(".hero-swiper", {
     onlyInViewport: true,
   },
   navigation: {
-    nextEl: ".slider-next",
-    prevEl: ".slider-prev",
+    nextEl: ".hero-next",
+    prevEl: ".hero-prev",
   },
 
   pagination: {
@@ -27,20 +27,20 @@ const heroSwiper = new Swiper(".hero-swiper", {
 //products-swiper
 Swiper.use([Navigation, Pagination, Keyboard]);
 const productsSwiper = new Swiper(".products-swiper", {
-  slidesPerView: 3.7,
+  slidesPerView: 3,
   slidesPerGroup: 1,
   spaceBetween: 10,
   autoHeight: false,
   centeredSlides: true,
   speed: 1000,
 
-  loop: true,
+  loop: false,
   keyboard: {
     enabled: true,
     onlyInViewport: true,
   },
   navigation: {
-    nextEl: ".slider-next",
-    prevEl: ".slider-prev",
+    nextEl: ".products-next",
+    prevEl: ".products-prev",
   },
 });

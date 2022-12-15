@@ -30,6 +30,10 @@
       background-color: var(--main-red);
       border: transparent;
     }
+
+    &:hover svg {
+      fill: var(--light-color) !important;
+    }
   }
 }
 
