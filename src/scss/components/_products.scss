@@ -4,78 +4,180 @@
   &__container {
     background-color: var(--light-color);
     border-radius: 1.042vw;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+
     height: 100%;
-    //padding: 2.604vw 0 2vw 2.604vw;
-    //display: flex;
-    //justify-content: space-between;
+    padding: 5vw 0 2vw;
+    overflow: hidden;
+    transition: all 1s ease-in;
+    overflow: hidden;
   }
 }
 
+.add {
+  transform: translateX(-200%);
+}
+
+//products-descr
 .products-descr {
-  display: none;
+  position: relative;
+  display: flex;
+  padding-left: 3vw;
+  transition: all 0.7s ease-in;
+
+  &__images {
+    position: absolute;
+    top: -12vw;
+    left: 3vw;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.458vw;
+    position: relative;
+    top: 100%;
+    padding-top: 1vw;
+    padding-bottom: 4vw;
+    padding-right: 5vw;
+    background-color: var(--light-color);
+    z-index: 5;
+    border-radius: 0% 100% 0% 100% / 100% 34% 66% 0%;
+  }
+
+  &__text {
+    font-size: 1.458vw;
+    line-height: 2.083vw;
+    span {
+      font-weight: 700;
+    }
+  }
 }
 
 .bottle {
   display: block;
-  height: 33vw;
-  width: auto;
-  fill: transparent;
+  fill: var(--light-color);
+  width: 23.615vw;
+  height: 60.677vw;
+  transition: all 0.25s ease-in;
 }
 
 .bottle1 {
-  position: relative;
-  stroke: rgba(161, 43, 78, 0.7);
-  stroke-width: 0.365vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
 }
 
 .bottle2 {
   position: absolute;
-  top: 0;
-  left: 0;
-  stroke-width: 0.22vw;
-  stroke: rgba(161, 43, 78, 0.3);
+  top: 2vw;
+  left: 4vw;
+  transform: rotate(13deg);
+  z-index: 3;
 }
 
 .bottle3 {
   position: absolute;
-  top: 0;
-  left: 0;
-  stroke-width: 0.22vw;
-  stroke: rgba(161, 43, 78, 0.2);
+  top: 4vw;
+  left: 9vw;
+  transform: rotate(22deg);
+  z-index: 2;
 }
 
 .bottle4 {
   position: absolute;
-  top: 0;
-  left: 0;
-  stroke-width: 0.22vw;
-  stroke: rgba(161, 43, 78, 0.1);
+  top: 7vw;
+  left: 14vw;
+  transform: rotate(30deg);
+  z-index: 1;
 }
 
+@keyframes bottle2 {
+  from {
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+  }
+  to {
+    transform: rotate(13deg);
+    top: 2vw;
+    left: 3vw;
+  }
+}
+
+@keyframes bottle3 {
+  from {
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+  }
+  to {
+    transform: rotate(22deg);
+    top: 4vw;
+    left: 8vw;
+  }
+}
+
+@keyframes bottle4 {
+  from {
+    transform: rotate(0deg);
+    top: 0;
+    left: 0;
+  }
+  to {
+    transform: rotate(30deg);
+    top: 7vw;
+    left: 13vw;
+  }
+}
+
+.bottle-animation2 {
+  animation: bottle2 1s ease-in alternate;
+}
+
+.bottle-animation3 {
+  animation: bottle3 1s ease-in alternate;
+}
+
+.bottle-animation4 {
+  animation: bottle4 1s ease-in alternate;
+}
+
+//products swiper
 .products-swiper {
-  position: relative;
-  top: 35%;
   &__slide {
+    &:first-child {
+      width: 36vw !important;
+      left: 0vw;
+      padding-top: 3vw;
+      padding-left: 9vw;
+    }
   }
 
   &__content {
-    padding-top: 3vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    transform: translateX(-8vw) !important;
+    padding-top: 9vw;
     align-items: center;
+    transition: all 0.6s ease-in;
   }
 
   &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
     width: 14.635vw;
     height: 13.594vw;
-    margin: 0 auto;
+    margin: 0 auto 1.563vw;
   }
 
   &__circle {
     position: relative;
-    top: 0;
-    left: 0;
     transform: translate(0);
     background-color: #f2f2f2;
     width: 14.063vw;
@@ -128,22 +230,21 @@
   &__title {
     font-family: var(--font-family-Alumni);
     font-weight: 500;
-    font-size: 2.646vw;
+    font-size: 3.688vw;
     line-height: 3.646vw;
     color: var(--main-red);
     text-transform: uppercase;
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.521vw;
   }
 
   &__item {
-    &:not(:last-child) {
-      margin-bottom: 0.521vw;
-    }
-  }
-
-  &__btn {
+    font-size: 1.146vw;
+    line-height: 1.823vw;
   }
 
   .slider-btns {
@@ -175,10 +276,7 @@
 .products-swiper__slide.swiper-slide-active .products-swiper__circle {
   width: 21.25vw;
   height: 15.156vw;
-  top: -30%;
-  left: 50%;
   background-color: #e2b9c5;
-  transform: translate(-50%, 0);
 }
 
 .products-swiper__slide.swiper-slide-active .products-swiper__circle-red {
