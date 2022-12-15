@@ -209,6 +209,9 @@ const productsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".prod
     prevEl: ".products-prev"
   }
 });
+const slides = document.querySelector(".products .swiper-slide");
+console.log(slides);
+slides.classList.add("actives");
 
 /***/ }),
 

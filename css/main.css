@@ -887,10 +887,7 @@ html {
   background-color: var(--light-color);
   border-radius: 1.042vw;
   height: 100%;
-}
-
-.products-descr {
-  display: none;
+  padding: 5vw 0 2vw;
 }
 
 .bottle {
@@ -935,7 +932,7 @@ html {
   top: 35%;
 }
 .products-swiper__content {
-  padding-top: 3vw;
+  padding-top: 9vw;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
