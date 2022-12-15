@@ -903,17 +903,9 @@ html {
 }
 
 .add {
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.addGrid {
-  -ms-grid-row: 1 !important;
-  -ms-grid-row-span: 1 !important;
-  -ms-grid-column: 1 !important;
-  -ms-grid-column-span: 5 !important;
-  grid-area: 1/1/2/6 !important;
+  -webkit-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  transform: translateX(-200%);
 }
 
 .products-descr {

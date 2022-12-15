@@ -269,13 +269,11 @@ const sectionSwiper = document.querySelector(".products-swiper__main");
 btnNext.addEventListener("click", () => {
   if (activeSlide[1].classList.contains("swiper-slide-active")) {
     document.querySelector(".products-descr").classList.add("add");
-    sectionSwiper.classList.add("addGrid");
   }
 });
 btnPrev.addEventListener("click", () => {
   if (activeSlide[0].classList.contains("swiper-slide-active")) {
     document.querySelector(".products-descr").classList.remove("add");
-    sectionSwiper.classList.remove("addGrid");
   }
 });
 
