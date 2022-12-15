@@ -949,9 +949,6 @@ html {
   margin: 0 auto;
 }
 .products-swiper__circle {
-  position: relative;
-  top: 0;
-  left: 0;
   -webkit-transform: translate(0);
   -ms-transform: translate(0);
   transform: translate(0);
@@ -1063,12 +1060,10 @@ html {
 .products-swiper__slide.swiper-slide-active .products-swiper__circle {
   width: 21.25vw;
   height: 15.156vw;
-  top: -30%;
-  left: 50%;
   background-color: #e2b9c5;
-  -webkit-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-15%, -30%);
+  -ms-transform: translate(-15%, -30%);
+  transform: translate(-15%, -30%);
 }
 
 .products-swiper__slide.swiper-slide-active .products-swiper__circle-red {
