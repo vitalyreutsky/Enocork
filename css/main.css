@@ -944,11 +944,25 @@ html {
   transition: all 0.6s ease-in;
 }
 .products-swiper__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
   width: 14.635vw;
   height: 13.594vw;
   margin: 0 auto;
 }
 .products-swiper__circle {
+  position: relative;
   -webkit-transform: translate(0);
   -ms-transform: translate(0);
   transform: translate(0);
@@ -1061,9 +1075,6 @@ html {
   width: 21.25vw;
   height: 15.156vw;
   background-color: #e2b9c5;
-  -webkit-transform: translate(-15%, -30%);
-  -ms-transform: translate(-15%, -30%);
-  transform: translate(-15%, -30%);
 }
 
 .products-swiper__slide.swiper-slide-active .products-swiper__circle-red {
