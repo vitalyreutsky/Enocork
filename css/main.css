@@ -631,6 +631,7 @@ html {
   font-family: var(--font-family-Alumni);
   font-size: 5.729vw;
   line-height: 4.688vw;
+  text-transform: uppercase;
 }
 
 .header {
@@ -886,50 +887,121 @@ html {
 .products__container {
   background-color: var(--light-color);
   border-radius: 1.042vw;
+}
+.products__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 100%;
   padding: 5vw 0 2vw;
+  overflow: hidden;
+  -webkit-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  overflow: hidden;
 }
 
-.bottle {
-  display: block;
-  height: 33vw;
-  width: auto;
-  fill: transparent;
+.add {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
-.bottle1 {
+.remove-transform {
+  -webkit-transform: translate(0) !important;
+  -ms-transform: translate(0) !important;
+  transform: translate(0) !important;
+}
+
+.products-descr {
   position: relative;
-  stroke: rgba(161, 43, 78, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding-left: 3vw;
+  -webkit-transition: all 0.7s ease-in;
+  -o-transition: all 0.7s ease-in;
+  transition: all 0.7s ease-in;
+}
+.products-descr__images {
+  position: absolute;
+  top: 0;
+  left: -7vw;
+  width: 40vw;
+  height: 50vw;
+}
+.products-descr__content {
+  position: relative;
+  top: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 3vw;
+  background-color: var(--light-color);
+  z-index: 1;
+}
+.products-descr__title {
+  margin-bottom: 1.458vw;
+}
+.products-descr__text {
+  font-size: 1.458vw;
+  line-height: 2.083vw;
+}
+.products-descr__text span {
+  font-weight: 700;
+}
+
+.bottles svg {
+  display: block;
+  fill: transparent;
+  width: 100%;
+  height: 100%;
+  stroke: var(--main-red);
+}
+
+.bottles svg:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
   stroke-width: 0.365vw;
+  opacity: 0.8;
 }
 
-.bottle2 {
+.bottles svg:nth-child(2) {
   position: absolute;
   top: 0;
   left: 0;
-  stroke-width: 0.22vw;
-  stroke: rgba(161, 43, 78, 0.3);
+  stroke-width: 0.25vw;
+  opacity: 0.5;
 }
 
-.bottle3 {
+.bottles svg:nth-child(3) {
   position: absolute;
   top: 0;
   left: 0;
-  stroke-width: 0.22vw;
-  stroke: rgba(161, 43, 78, 0.2);
+  stroke-width: 0.25vw;
+  opacity: 0.3;
 }
 
-.bottle4 {
+.bottles svg:nth-child(4) {
   position: absolute;
   top: 0;
   left: 0;
-  stroke-width: 0.22vw;
-  stroke: rgba(161, 43, 78, 0.1);
+  stroke-width: 0.25vw;
+  opacity: 0.1;
 }
 
 .products-swiper {
-  position: relative;
-  top: 35%;
+  -webkit-transition: all 0.7s ease-in;
+  -o-transition: all 0.7s ease-in;
+  transition: all 0.7s ease-in;
+}
+.products-swiper__slide {
+  -webkit-transform: translateX(-14vw);
+  -ms-transform: translateX(-14vw);
+  transform: translateX(-14vw);
 }
 .products-swiper__content {
   padding-top: 9vw;
@@ -956,7 +1028,7 @@ html {
   justify-content: end;
   width: 14.635vw;
   height: 13.594vw;
-  margin: 0 auto;
+  margin: 0 auto 1.563vw;
 }
 .products-swiper__circle {
   position: relative;
@@ -1034,6 +1106,10 @@ html {
   line-height: 3.646vw;
   color: var(--main-red);
   text-transform: uppercase;
+}
+.products-swiper__item {
+  font-size: 1.146vw;
+  line-height: 1.823vw;
 }
 .products-swiper__item:not(:last-child) {
   margin-bottom: 0.521vw;

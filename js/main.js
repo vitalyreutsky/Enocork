@@ -193,25 +193,35 @@ const heroSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".hero-swi
 //products-swiper
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Keyboard]);
 const productsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".products-swiper", {
-  slidesPerView: 3,
+  slidesPerView: 2.5,
   slidesPerGroup: 1,
   spaceBetween: 10,
   autoHeight: false,
   centeredSlides: true,
   speed: 1000,
   loop: false,
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true
-  },
+  //keyboard: {
+  //  enabled: true,
+  //  onlyInViewport: true,
+  //},
   navigation: {
     nextEl: ".products-next",
     prevEl: ".products-prev"
   }
 });
-const slides = document.querySelector(".products .swiper-slide");
-console.log(slides);
-slides.classList.add("actives");
+const btnNext = document.querySelector(".products-next");
+const btnPrev = document.querySelector(".products-prev");
+const activeSlide = document.querySelectorAll(".products-swiper__slide");
+btnNext.addEventListener("click", () => {
+  if (activeSlide[1].classList.contains("swiper-slide-active")) {
+    document.querySelector(".products-descr").classList.add("add");
+  }
+});
+btnPrev.addEventListener("click", () => {
+  if (activeSlide[0].classList.contains("swiper-slide-active")) {
+    document.querySelector(".products-descr").classList.remove("add");
+  }
+});
 
 /***/ }),
 
