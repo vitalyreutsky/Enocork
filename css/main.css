@@ -708,6 +708,14 @@ html {
 }
 .nav__link {
   font-size: 1.042vw;
+  -webkit-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+@media (min-width: 1200px) {
+  .nav__link:hover {
+    color: var(--main-red);
+  }
 }
 
 .lang {
