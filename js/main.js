@@ -152,12 +152,8 @@ const modal = new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]();
   \***************************************/
 /***/ (() => {
 
-const bottlesIcon2 = document.querySelector(".bottle2");
-const bottlesIcon3 = document.querySelector(".bottle3");
-const bottlesIcon4 = document.querySelector(".bottle4");
-
-// устанавливаем настройки
-const options = {
+// устанавливаем настройки для bottles
+const optionsBottles = {
   // родитель целевого элемента - область просмотра
   root: null,
   // отступ снизу
@@ -166,10 +162,13 @@ const options = {
   threshold: 0.1
 };
 // создаем наблюдатель
-const observer = new IntersectionObserver((entries, observer) => {
+const observerBottles = new IntersectionObserver((entries, observer) => {
   // для каждой записи-целевого элемента
   entries.forEach(entry => {
     // если элемент является наблюдаемым
+    const bottlesIcon2 = document.querySelector(".bottle2");
+    const bottlesIcon3 = document.querySelector(".bottle3");
+    const bottlesIcon4 = document.querySelector(".bottle4");
     if (entry.isIntersecting) {
       // добавить ему CSS-класс
       bottlesIcon2.classList.add("bottle-animation2");
@@ -181,9 +180,38 @@ const observer = new IntersectionObserver((entries, observer) => {
       bottlesIcon4.classList.remove("bottle-animation4");
     }
   });
-}, options);
+}, optionsBottles);
 // выбираем обьект слежения по классу
-observer.observe(document.querySelector(".products"));
+observerBottles.observe(document.querySelector(".products"));
+
+// устанавливаем настройки для bottles
+const optionsPartners = {
+  // родитель целевого элемента - область просмотра
+  root: null,
+  // отступ снизу
+  rootMargin: "0px",
+  // процент пересечения - половина изображения
+  threshold: 0.1
+};
+// создаем наблюдатель
+const observerPartners = new IntersectionObserver((entries, observer) => {
+  // для каждой записи-целевого элемента
+  entries.forEach(entry => {
+    // если элемент является наблюдаемым
+    const cork = document.querySelector(".partners-block__red-image");
+    const barrel = document.querySelector(".partners-block__animation-image svg");
+    if (entry.isIntersecting) {
+      // добавить ему CSS-класс
+      cork.classList.add("cork-animation");
+      barrel.classList.add("barrel-animation");
+    } else {
+      cork.classList.remove("cork-animation");
+      barrel.classList.remove("barrel-animation");
+    }
+  });
+}, optionsPartners);
+// выбираем обьект слежения по классу
+observerPartners.observe(document.querySelector(".partners"));
 
 /***/ }),
 
@@ -222,6 +250,9 @@ const heroSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".hero-swi
 });
 
 //products-swiper
+
+const swiperBtnPrev = document.querySelector(".products-prev");
+const swiperBtnNext = document.querySelector(".products-next");
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Keyboard]);
 const productsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".products-swiper", {
   //slidesPerView: 2.5,
@@ -240,6 +271,11 @@ const productsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".prod
   navigation: {
     nextEl: ".products-next",
     prevEl: ".products-prev"
+  }
+});
+productsSwiper.on("slideChange", function () {
+  if (productsSwiper.activeIndex == 0) {
+    productsSwiper.slideTo(1);
   }
 });
 
