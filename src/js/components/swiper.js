@@ -31,22 +31,18 @@ const productsSwiper = new Swiper(".products-swiper", {
   slidesPerView: "auto",
   slidesPerGroup: 1,
   spaceBetween: 0,
-  allowTouchMove: false,
+  allowTouchMove: true,
   centeredSlides: true,
   speed: 1000,
   initialSlide: 1,
 
   loop: false,
-  //keyboard: {
-  //  enabled: true,
-  //  onlyInViewport: true,
-  //},
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
   navigation: {
     nextEl: ".products-next",
     prevEl: ".products-prev",
   },
 });
-
-const btnNext = document.querySelector(".products-next");
-const btnPrev = document.querySelector(".products-prev");
-const activeSlide = document.querySelector(".swiper-slide__descr");

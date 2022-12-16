@@ -11,7 +11,7 @@
     display: flex;
 
     height: 100%;
-    padding: 5vw 0 2vw;
+    padding: 5vw 0 1vw;
     overflow: hidden;
     transition: all 1s ease-in;
     overflow: hidden;
@@ -144,7 +144,7 @@
   }
 
   &__content {
-    padding-top: 9vw;
+    padding-top: 10vw;
     align-items: center;
     transition: all 0.6s ease-in;
   }
@@ -233,7 +233,7 @@
   .slider-btns {
     position: absolute;
     right: 3.125vw;
-    bottom: 0;
+    bottom: 1vw;
   }
   .slider-prev,
   .slider-next {
@@ -245,7 +245,7 @@
 }
 
 .products-swiper__slide.swiper-slide-active .products-swiper__content {
-  transform: translate(1vw, 0);
+  transform: translate(1vw, -1vw);
 }
 
 .products-swiper__slide.swiper-slide-active .products-swiper__bottom {

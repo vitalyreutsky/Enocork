@@ -9,7 +9,7 @@ const options = {
   // отступ снизу
   rootMargin: "0px",
   // процент пересечения - половина изображения
-  threshold: 0.5,
+  threshold: 0.1,
 };
 // создаем наблюдатель
 const observer = new IntersectionObserver((entries, observer) => {
