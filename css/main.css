@@ -298,13 +298,18 @@ html {
   }
 }
 
+.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .slider-prev {
   margin-right: 1.042vw;
 }
 
 .social__wrapper {
   position: fixed;
-  top: 37%;
+  top: 17vw;
   right: 1.3vw;
   z-index: 10;
 }
@@ -699,9 +704,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-.nav__item:not(:last-child) {
-  margin-right: 2.11vw;
+  gap: 2.11vw;
 }
 .nav__link {
   font-size: 1.042vw;
@@ -931,10 +934,10 @@ html {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1.458vw;
+  gap: 1.7vw;
   position: relative;
   top: 100%;
-  padding-top: 1vw;
+  padding-top: 0;
   padding-bottom: 4vw;
   padding-right: 5vw;
   background-color: var(--light-color);
@@ -954,9 +957,9 @@ html {
   fill: var(--light-color);
   width: 23.615vw;
   height: 60.677vw;
-  -webkit-transition: all 0.25s ease-in;
-  -o-transition: all 0.25s ease-in;
-  transition: all 0.25s ease-in;
+  -webkit-transition: all 0.8s ease-out;
+  -o-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
 }
 
 .bottle1 {
@@ -968,70 +971,43 @@ html {
 
 .bottle2 {
   position: absolute;
-  top: 2vw;
-  left: 4vw;
-  -webkit-transform: rotate(13deg);
-  -ms-transform: rotate(13deg);
-  transform: rotate(13deg);
+  top: 0;
+  left: 0;
   z-index: 3;
 }
 
 .bottle3 {
   position: absolute;
-  top: 4vw;
-  left: 9vw;
-  -webkit-transform: rotate(22deg);
-  -ms-transform: rotate(22deg);
-  transform: rotate(22deg);
+  top: 0;
+  left: 0;
   z-index: 2;
 }
 
 .bottle4 {
   position: absolute;
-  top: 7vw;
-  left: 14vw;
-  -webkit-transform: rotate(30deg);
-  -ms-transform: rotate(30deg);
-  transform: rotate(30deg);
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 
 @-webkit-keyframes bottle2 {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    top: 0;
-    left: 0;
-  }
   to {
     -webkit-transform: rotate(13deg);
     transform: rotate(13deg);
     top: 2vw;
-    left: 3vw;
+    left: 3.5vw;
   }
 }
 
 @keyframes bottle2 {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    top: 0;
-    left: 0;
-  }
   to {
     -webkit-transform: rotate(13deg);
     transform: rotate(13deg);
     top: 2vw;
-    left: 3vw;
+    left: 3.5vw;
   }
 }
 @-webkit-keyframes bottle3 {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    top: 0;
-    left: 0;
-  }
   to {
     -webkit-transform: rotate(22deg);
     transform: rotate(22deg);
@@ -1040,12 +1016,6 @@ html {
   }
 }
 @keyframes bottle3 {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    top: 0;
-    left: 0;
-  }
   to {
     -webkit-transform: rotate(22deg);
     transform: rotate(22deg);
@@ -1054,12 +1024,6 @@ html {
   }
 }
 @-webkit-keyframes bottle4 {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    top: 0;
-    left: 0;
-  }
   to {
     -webkit-transform: rotate(30deg);
     transform: rotate(30deg);
@@ -1068,12 +1032,6 @@ html {
   }
 }
 @keyframes bottle4 {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    top: 0;
-    left: 0;
-  }
   to {
     -webkit-transform: rotate(30deg);
     transform: rotate(30deg);
@@ -1082,30 +1040,30 @@ html {
   }
 }
 .bottle-animation2 {
-  -webkit-animation: bottle2 1s ease-in alternate;
-  animation: bottle2 1s ease-in alternate;
+  -webkit-animation: bottle2 0.8s ease-out both;
+  animation: bottle2 0.8s ease-out both;
 }
 
 .bottle-animation3 {
-  -webkit-animation: bottle3 1s ease-in alternate;
-  animation: bottle3 1s ease-in alternate;
+  -webkit-animation: bottle3 0.8s ease-out both;
+  animation: bottle3 0.8s ease-out both;
 }
 
 .bottle-animation4 {
-  -webkit-animation: bottle4 1s ease-in alternate;
-  animation: bottle4 1s ease-in alternate;
+  -webkit-animation: bottle4 0.8s ease-out both;
+  animation: bottle4 0.8s ease-out both;
 }
 
+.products-swiper__slide {
+  width: 35vw;
+}
 .products-swiper__slide:first-child {
   width: 36vw !important;
-  left: 0vw;
+  left: 7vw;
   padding-top: 3vw;
   padding-left: 9vw;
 }
 .products-swiper__content {
-  -webkit-transform: translateX(-8vw) !important;
-  -ms-transform: translateX(-8vw) !important;
-  transform: translateX(-8vw) !important;
   padding-top: 9vw;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1130,7 +1088,7 @@ html {
   justify-content: end;
   width: 14.635vw;
   height: 13.594vw;
-  margin: 0 auto 1.563vw;
+  margin: 0 auto -1vw;
 }
 .products-swiper__circle {
   position: relative;
@@ -1217,7 +1175,7 @@ html {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 0.521vw;
+  gap: 0.121vw;
 }
 .products-swiper__item {
   font-size: 1.146vw;
@@ -1237,10 +1195,16 @@ html {
   fill: var(--text-black);
 }
 
+.products-swiper__slide.swiper-slide-active .products-swiper__content {
+  -webkit-transform: translate(1vw, 0);
+  -ms-transform: translate(1vw, 0);
+  transform: translate(1vw, 0);
+}
+
 .products-swiper__slide.swiper-slide-active .products-swiper__bottom {
-  -webkit-transform: translate(0);
-  -ms-transform: translate(0);
-  transform: translate(0);
+  -webkit-transform: translate(0.5vw);
+  -ms-transform: translate(0.5vw);
+  transform: translate(0.5vw);
   opacity: 1;
   visibility: visible;
 }
@@ -1256,6 +1220,9 @@ html {
 .products-swiper__slide.swiper-slide-active .products-swiper__circle {
   width: 21.25vw;
   height: 15.156vw;
+  -webkit-transform: translate(1vw, -2vw);
+  -ms-transform: translate(1vw, -2vw);
+  transform: translate(1vw, -2vw);
   background-color: #e2b9c5;
 }
 
