@@ -21,47 +21,8 @@
 
   <body class="page__body">
     <div class="site-container">
-      <header class="header fix-block">
-  <div class="container header__container">
-    <nav class="nav">
-      <ul class="nav__list list-reset">
-        <li class="nav__item">
-          <a href="#" class="nav__link">Главная</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Каталог</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">О компании</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Контакты</a>
-        </li>
-      </ul>
-    </nav>
-    <a href="#" class="header__logo">
-      <picture>
-        <source srcset="img/logo.webp" type="image/webp" />
-        <img loading="lazy" src="img/logo.png" class="image" alt="Logo" />
-      </picture>
-    </a>
-    <a
-      href="#"
-      class="header__btn btn-primary btn-reset"
-      data-graph-path="modal-consultation"
-      data-graph-animation="fadeInUp"
-    >
-      Обратный звонок
-    </a>
-    <div class="header__lang lang">
-      <svg>
-        <use xlink:href="img/sprite.svg#lang"></use>
-      </svg>
-      <span>EN</span>
-    </div>
-  </div>
-</header>
- <aside class="social">
+
+      <aside class="social">
   <div class="social__wrapper">
     <ul class="social__list list-reset">
       <a
@@ -126,8 +87,7 @@
     </ul>
   </div>
 </aside>
-
-      <div class="graph-modal modal">
+ <div class="graph-modal modal">
   <div
     class="graph-modal__container modal__container modal-consultation"
     role="dialog"
@@ -698,7 +658,50 @@
   </div>
 </section>
  <section class="partners main-offset">
-  <div class="container partners__container"></div>
+  <div class="container partners__container">
+    <div class="partners-block__descr">
+      <h2 class="partners-block__title page-title">Все для виноделия</h2>
+      <p class="partners-block__text">
+        <span>ООО «Юникорк»</span> более 25 лет является поставщиком
+        комплектующих для производителей алкогольной и безалкогольной продукции.
+      </p>
+      <div class="partners-block__animation">
+        <div class="partners-block__animation-image">
+          <picture>
+            <source srcset="img/barrel.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="img/barrel.png"
+              class="image"
+              alt="Barrel"
+            />
+          </picture>
+          <img loading="lazy" src="img/bar.png" class="image" alt="" />
+        </div>
+        <div class="partners-block__animation-text">
+          <p>
+            Нашими партнерами являются ведущие <span>зарубежными фирмы</span> —
+            производители Португалии, Франции, Испании, Италии, Аргентины, Чили,
+            Китая и других стран.
+          </p>
+          <a href="#" class="btn-primary btn-reset">Подробнее</a>
+        </div>
+      </div>
+    </div>
+    <div class="partners-block__red">
+      <div class="partners-block__red-image">
+        <picture>
+          <source srcset="img/partners2.webp" type="image/webp" />
+          <img
+            loading="lazy"
+            src="img/partners2.png"
+            class="image"
+            alt="Cork"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
 </section>
 
       </main>
