@@ -27,10 +27,11 @@ const heroSwiper = new Swiper(".hero-swiper", {
 //products-swiper
 Swiper.use([Navigation, Pagination, Keyboard]);
 const productsSwiper = new Swiper(".products-swiper", {
-  slidesPerView: 2.5,
+  //slidesPerView: 2.5,
+  slidesPerView: "auto",
   slidesPerGroup: 1,
   spaceBetween: 0,
-  autoHeight: false,
+  allowTouchMove: false,
   centeredSlides: true,
   speed: 1000,
   initialSlide: 1,
@@ -48,17 +49,4 @@ const productsSwiper = new Swiper(".products-swiper", {
 
 const btnNext = document.querySelector(".products-next");
 const btnPrev = document.querySelector(".products-prev");
-const activeSlide = document.querySelectorAll(".products-swiper__slide");
-const sectionSwiper = document.querySelector(".products-swiper__main");
-
-//btnNext.addEventListener("click", () => {
-//  if (activeSlide[1].classList.contains("swiper-slide-active")) {
-//    document.querySelector(".products-descr").classList.add("add");
-//  }
-//});
-
-//btnPrev.addEventListener("click", () => {
-//  if (activeSlide[0].classList.contains("swiper-slide-active")) {
-//    document.querySelector(".products-descr").classList.remove("add");
-//  }
-//});
+const activeSlide = document.querySelector(".swiper-slide__descr");

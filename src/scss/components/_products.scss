@@ -38,10 +38,10 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 1.458vw;
+    gap: 1.7vw;
     position: relative;
     top: 100%;
-    padding-top: 1vw;
+    padding-top: 0;
     padding-bottom: 4vw;
     padding-right: 5vw;
     background-color: var(--light-color);
@@ -63,7 +63,7 @@
   fill: var(--light-color);
   width: 23.615vw;
   height: 60.677vw;
-  transition: all 0.25s ease-in;
+  transition: all 0.8s ease-out;
 }
 
 .bottle1 {
@@ -75,47 +75,35 @@
 
 .bottle2 {
   position: absolute;
-  top: 2vw;
-  left: 4vw;
-  transform: rotate(13deg);
+  top: 0;
+  left: 0;
   z-index: 3;
 }
 
 .bottle3 {
   position: absolute;
-  top: 4vw;
-  left: 9vw;
-  transform: rotate(22deg);
+  top: 0;
+  left: 0;
   z-index: 2;
 }
 
 .bottle4 {
   position: absolute;
-  top: 7vw;
-  left: 14vw;
-  transform: rotate(30deg);
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 
+//add animation
 @keyframes bottle2 {
-  from {
-    transform: rotate(0deg);
-    top: 0;
-    left: 0;
-  }
   to {
     transform: rotate(13deg);
     top: 2vw;
-    left: 3vw;
+    left: 3.5vw;
   }
 }
 
 @keyframes bottle3 {
-  from {
-    transform: rotate(0deg);
-    top: 0;
-    left: 0;
-  }
   to {
     transform: rotate(22deg);
     top: 4vw;
@@ -124,11 +112,6 @@
 }
 
 @keyframes bottle4 {
-  from {
-    transform: rotate(0deg);
-    top: 0;
-    left: 0;
-  }
   to {
     transform: rotate(30deg);
     top: 7vw;
@@ -137,30 +120,30 @@
 }
 
 .bottle-animation2 {
-  animation: bottle2 1s ease-in alternate;
+  animation: bottle2 0.8s ease-out both;
 }
 
 .bottle-animation3 {
-  animation: bottle3 1s ease-in alternate;
+  animation: bottle3 0.8s ease-out both;
 }
 
 .bottle-animation4 {
-  animation: bottle4 1s ease-in alternate;
+  animation: bottle4 0.8s ease-out both;
 }
 
 //products swiper
 .products-swiper {
   &__slide {
+    width: 35vw;
     &:first-child {
       width: 36vw !important;
-      left: 0vw;
+      left: 7vw;
       padding-top: 3vw;
       padding-left: 9vw;
     }
   }
 
   &__content {
-    transform: translateX(-8vw) !important;
     padding-top: 9vw;
     align-items: center;
     transition: all 0.6s ease-in;
@@ -173,7 +156,7 @@
     justify-content: end;
     width: 14.635vw;
     height: 13.594vw;
-    margin: 0 auto 1.563vw;
+    margin: 0 auto -1vw;
   }
 
   &__circle {
@@ -239,7 +222,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 0.521vw;
+    gap: 0.121vw;
   }
 
   &__item {
@@ -261,8 +244,12 @@
   }
 }
 
+.products-swiper__slide.swiper-slide-active .products-swiper__content {
+  transform: translate(1vw, 0);
+}
+
 .products-swiper__slide.swiper-slide-active .products-swiper__bottom {
-  transform: translate(0);
+  transform: translate(0.5vw);
   opacity: 1;
   visibility: visible;
 }
@@ -276,6 +263,7 @@
 .products-swiper__slide.swiper-slide-active .products-swiper__circle {
   width: 21.25vw;
   height: 15.156vw;
+  transform: translate(1vw, -2vw);
   background-color: #e2b9c5;
 }
 

@@ -37,6 +37,11 @@
   }
 }
 
+.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .slider-prev {
   margin-right: 1.042vw;
 }

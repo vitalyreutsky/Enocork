@@ -56,12 +56,7 @@
   z-index: 2;
   &__list {
     display: flex;
-  }
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 2.11vw;
-    }
+    gap: 2.11vw;
   }
 
   &__link {
