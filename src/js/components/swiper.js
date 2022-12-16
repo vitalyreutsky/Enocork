@@ -25,6 +25,10 @@ const heroSwiper = new Swiper(".hero-swiper", {
 });
 
 //products-swiper
+
+const swiperBtnPrev = document.querySelector(".products-prev");
+const swiperBtnNext = document.querySelector(".products-next");
+
 Swiper.use([Navigation, Pagination, Keyboard]);
 const productsSwiper = new Swiper(".products-swiper", {
   //slidesPerView: 2.5,
@@ -45,4 +49,10 @@ const productsSwiper = new Swiper(".products-swiper", {
     nextEl: ".products-next",
     prevEl: ".products-prev",
   },
+});
+
+productsSwiper.on("slideChange", function () {
+  if (productsSwiper.activeIndex == 0) {
+    productsSwiper.slideTo(1);
+  }
 });

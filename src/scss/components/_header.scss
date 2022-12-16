@@ -61,6 +61,12 @@
 
   &__link {
     font-size: 1.042vw;
+    transition: all 0.25s ease-in;
+    @include for-desktop {
+      &:hover {
+        color: var(--main-red);
+      }
+    }
   }
 }
 
