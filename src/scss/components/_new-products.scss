@@ -1,0 +1,123 @@
+.new-products {
+  &__container {
+    background-color: var(--light-color);
+    padding: 4.6vw 3.2vw 2.604vw;
+    border-radius: 1.042vw;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 6vw;
+  }
+
+  &__slide {
+    width: 14.2vw;
+  }
+
+  &__bg {
+    width: 40.938vw;
+    height: 42.969vw;
+    position: absolute;
+    top: 2vw;
+    right: -9vw;
+  }
+}
+
+.new-products-swiper {
+  overflow: visible;
+  &__wrapper {
+    gap: 1.302vw;
+    margin-bottom: 5.208vw;
+  }
+
+  .slider-btns {
+    position: static;
+    justify-content: flex-end;
+  }
+
+  .slider-prev,
+  .slider-next {
+    border-color: var(--text-black);
+    svg {
+      fill: var(--text-black);
+    }
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  padding: 1.198vw 0.938vw 1.8vw;
+  background: rgba(246, 247, 248, 0.6);
+  border: 1px solid rgba(44, 44, 44, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 1.042vw;
+}
+.product-image {
+  margin: 0 auto 0.9vw;
+  background-color: var(--light-color);
+  border-radius: 0.521vw;
+  img {
+    height: 11.51vw;
+    width: auto;
+  }
+}
+
+.product-bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1vw;
+}
+
+.product-name {
+  font-weight: 500;
+  font-size: 0.833vw;
+  line-height: 1.042vw;
+  margin-bottom: 1.563vw;
+}
+
+.product-subtitle {
+  color: #4cb050;
+  font-size: 0.833vw;
+  line-height: 1.042vw;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.833vw;
+  svg {
+    fill: #4cb050;
+    width: 0.721vw;
+    height: 0.765vw;
+    margin-right: 0.521vw;
+  }
+}
+
+.product-btn {
+  width: 100%;
+  height: 1.9vw;
+  margin: 0 auto;
+}
+
+.new-products-swiper__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: auto;
+}
+
+.new-products__pagination {
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    position: static;
+    justify-content: center;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #f2f2f2;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--main-red);
+  }
+}

@@ -86,3 +86,26 @@ const instaSwiper = new Swiper(".insta-swiper", {
     prevEl: ".insta-prev",
   },
 });
+
+//new-products swiper
+Swiper.use([Navigation, Pagination, Keyboard]);
+const newProductsSwiper = new Swiper(".new-products-swiper", {
+  slidesPerView: "auto",
+  slidesPerGroup: 1,
+  speed: 1000,
+  loop: false,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  navigation: {
+    nextEl: ".new-products-next",
+    prevEl: ".new-products-prev",
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: false,
+  },
+});
