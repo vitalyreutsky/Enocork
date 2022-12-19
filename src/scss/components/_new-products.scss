@@ -1,14 +1,14 @@
 .new-products {
   &__container {
     background-color: var(--light-color);
-    padding: 4.6vw 3.2vw 2.604vw;
+    padding: 4.6vw 3.2vw 1.6vw;
     border-radius: 1.042vw;
     overflow: hidden;
     position: relative;
   }
 
   &__title {
-    margin-bottom: 6vw;
+    margin-bottom: 5.6vw;
   }
 
   &__slide {
@@ -26,14 +26,16 @@
 
 .new-products-swiper {
   overflow: visible;
+  padding-right: 5vw;
   &__wrapper {
     gap: 1.302vw;
-    margin-bottom: 5.208vw;
+    margin-bottom: 5vw;
   }
 
   .slider-btns {
     position: static;
     justify-content: flex-end;
+    margin-right: -5vw;
   }
 
   .slider-prev,
