@@ -1,4 +1,4 @@
-// устанавливаем настройки для bottles
+//! устанавливаем настройки для bottles
 const optionsBottles = {
   // родитель целевого элемента - область просмотра
   root: null,
@@ -30,7 +30,7 @@ const observerBottles = new IntersectionObserver((entries, observer) => {
 // выбираем обьект слежения по классу
 observerBottles.observe(document.querySelector(".products"));
 
-// устанавливаем настройки для bottles
+//! устанавливаем настройки для bottles
 const optionsPartners = {
   // родитель целевого элемента - область просмотра
   root: null,
@@ -60,3 +60,45 @@ const observerPartners = new IntersectionObserver((entries, observer) => {
 }, optionsPartners);
 // выбираем обьект слежения по классу
 observerPartners.observe(document.querySelector(".partners"));
+
+//! устанавливаем настройки для секции feedback
+const optionsFeedback = {
+  // родитель целевого элемента - область просмотра
+  root: null,
+  // отступ снизу
+  rootMargin: "0px",
+  // процент пересечения - половина изображения
+  threshold: 0.1,
+};
+// создаем наблюдатель
+const observerFeedback = new IntersectionObserver((entries, observer) => {
+  // для каждой записи-целевого элемента
+  entries.forEach((entry) => {
+    // если элемент является наблюдаемым
+    const decorBarrel1 = document.querySelector(".barrel-decor1");
+    const decorBarrel2 = document.querySelector(".barrel-decor2");
+    const decorBarrelShadow = document.querySelectorAll(
+      ".barrel-decor__shadow"
+    );
+    if (entry.isIntersecting) {
+      // добавить ему CSS-класс
+      decorBarrel1.classList.add("animation-decor-barrel1");
+      decorBarrel2.classList.add("animation-decor-barrel2");
+    } else {
+      decorBarrel1.classList.remove("animation-decor-barrel1");
+      decorBarrel2.classList.remove("animation-decor-barrel2");
+    }
+
+    if (decorBarrel2.classList.contains("animation-decor-barrel2")) {
+      decorBarrelShadow.forEach((item) => {
+        item.style.opacity = 0;
+      });
+    } else {
+      decorBarrelShadow.forEach((item) => {
+        item.style.opacity = 1;
+      });
+    }
+  });
+}, optionsFeedback);
+// выбираем обьект слежения по классу
+observerFeedback.observe(document.querySelector(".feedback"));
