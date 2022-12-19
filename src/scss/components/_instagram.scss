@@ -3,7 +3,7 @@
     background-color: #272325;
     border-radius: 1.042vw;
     overflow: hidden;
-    padding: 3.646vw 3.125vw 20.006px;
+    padding: 4.3vw 3.125vw 1.3vw;
     position: relative;
     &::before {
       content: "";
@@ -18,38 +18,63 @@
       background-repeat: no-repeat;
       mix-blend-mode: multiply;
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 12.6vw;
+      right: 28.7vw;
+      width: 20vw;
+      height: 20vw;
+      background: rgba(255, 255, 255, 0.15);
+      border: 4px solid #a12b4e;
+      backdrop-filter: blur(2.5px);
+      border-radius: 1.042vw;
+    }
   }
 }
 
+.iphone {
+  position: absolute;
+  top: 0;
+  left: 8vw;
+  width: 34vw;
+  height: 46vw;
+  z-index: 1;
+}
+
 .insta-swiper {
-  //display: flex;
-  //flex-direction: column;
-  //gap: 1.823vw;
   overflow: visible;
+  transform: translateX(8vw);
+
   &__wrapper {
-    //gap: 1vw;
+    position: relative;
+    margin-bottom: 5.604vw;
   }
 
   &__title {
     color: var(--light-color);
     display: flex;
     justify-content: center;
+    margin-bottom: 5.208vw;
+    transform: translateX(5vw);
   }
 
   .swiper-slide-active {
-    //margin: 0 3vw;
   }
 
   .swiper-slide-next {
-    //margin-right: 1.5vw;
   }
 
   &__slide {
-    //width: 19.792vw !important;
-    //height: 19.792vw !important;
+    width: 17vw;
+    height: 17vw;
+    border-radius: 0.781vw;
+    overflow: hidden;
     img {
       width: 100%;
       height: 100%;
+      filter: drop-shadow(0px 0px 38px rgba(0, 0, 0, 0.31));
     }
   }
 
@@ -58,13 +83,15 @@
     line-height: 1.771vw;
     color: var(--light-color);
     width: 37.656vw;
-    margin: 0 auto;
+    margin: 0 auto 2vw;
+    transform: translateX(9.1vw);
     span {
       font-weight: 700;
     }
   }
 
   &__bottom {
+    transform: translateX(-8vw);
     display: flex;
     justify-content: space-between;
 

@@ -62,7 +62,7 @@ productsSwiper.on("slideChange", function () {
 //insta-swiper
 Swiper.use([Navigation, Pagination, Keyboard, EffectCoverflow]);
 const instaSwiper = new Swiper(".insta-swiper", {
-  slidesPerView: 5,
+  slidesPerView: "auto",
   effect: "coverflow",
   slidesPerGroup: 1,
   slidesOffsetBefore: 0,
@@ -71,11 +71,11 @@ const instaSwiper = new Swiper(".insta-swiper", {
   loop: true,
   coverflowEffect: {
     rotate: 0,
-    stretch: -120,
+    stretch: -70,
     depth: 100,
     modifier: 1,
     slideShadows: false,
-    scale: 0.8,
+    scale: 0.85,
   },
   keyboard: {
     enabled: true,
