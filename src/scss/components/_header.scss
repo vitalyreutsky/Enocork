@@ -11,7 +11,6 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    z-index: -1;
     &::after {
       content: "";
       position: absolute;
@@ -23,7 +22,6 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      z-index: 1;
     }
     &::before {
       content: "";
@@ -36,7 +34,6 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      z-index: 1;
     }
   }
 

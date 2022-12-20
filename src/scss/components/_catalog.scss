@@ -1,0 +1,178 @@
+.catalog {
+  padding-top: 5vw;
+
+  .breadcrumbs {
+    margin: 0;
+    margin-bottom: 3vw;
+    .breadcrumbs__item::after {
+      background-color: var(--light-color);
+    }
+    .breadcrumbs__link {
+      color: var(--light-color);
+      svg {
+        width: 0.7vw;
+        height: 0.7vw;
+      }
+    }
+  }
+}
+
+.catalog-content {
+  display: flex;
+  background-color: var(--main-red);
+  border-radius: 1.042vw;
+  margin-bottom: 2.083vw;
+  overflow: hidden;
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    padding: 2.8vw 1.9vw;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: var(--font-family-Alumni);
+    color: var(--light-color);
+    font-weight: 500;
+    font-size: 4.688vw;
+    line-height: 4.167vw;
+  }
+
+  &__image {
+    width: 50%;
+    height: 17.7vw;
+    img {
+      display: block;
+    }
+  }
+}
+
+.catalog-products__sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 2.083vw;
+}
+
+.product-descr {
+  padding: 1.563vw 1vw 1.563vw 1.563vw;
+  display: flex;
+  width: 28vw;
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.102vw;
+  }
+
+  &__title {
+    font-family: var(--font-family-Alumni);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.604vw;
+    line-height: 3.125vw;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    gap: 1.302vw;
+  }
+
+  &__btn {
+    width: 11.3vw;
+    height: 2.4vw;
+  }
+}
+
+.catalog-product__slider {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--light-color);
+  border-radius: 1.042vw;
+}
+
+.catalog-swiper {
+  padding: 1.4vw 0 1.3vw 0vw;
+  width: 100%;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    height: 90%;
+    width: 5.104vw;
+    background: linear-gradient(
+      270deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5.77vw;
+    width: 5vw;
+    height: 100%;
+    box-shadow: 47px 0px 60px rgba(0, 0, 0, 0.05);
+    border-radius: 1.042vw 0vw 0vw 1.042vw;
+    z-index: 2;
+  }
+
+  &__wrapper {
+    gap: 1.302vw;
+    margin-left: 2vw;
+  }
+}
+
+.slider-btns {
+  position: static;
+}
+
+.slider-prev,
+.slider-next {
+  border-color: var(--text-black);
+  svg {
+    fill: var(--text-black);
+  }
+}
+
+.catalog-slide {
+  width: 22.3vw;
+  min-height: 12vw;
+  border: 0.052vw solid rgba(0, 0, 0, 0.3);
+  border-radius: 1.042vw;
+  overflow: hidden;
+  &__image {
+    height: 10vw;
+    img {
+      width: 100%;
+      height: 100%;
+      transform: scale(1.05);
+      object-position: 0 0;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    padding: 1.5vw;
+    h3 {
+      font-family: var(--font-family-Alumni);
+      font-weight: 400;
+      font-size: 1.667vw;
+      line-height: 1.458vw;
+    }
+  }
+}

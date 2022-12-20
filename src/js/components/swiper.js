@@ -6,7 +6,7 @@ import Swiper, {
   EffectCoverflow,
 } from "swiper";
 
-//hero-swiper
+//!hero-swiper
 Swiper.use([Navigation, Pagination, Keyboard, EffectFade]);
 const heroSwiper = new Swiper(".hero-swiper", {
   slidesPerView: "auto",
@@ -30,7 +30,7 @@ const heroSwiper = new Swiper(".hero-swiper", {
   },
 });
 
-//products-swiper
+//!products-swiper
 Swiper.use([Navigation, Pagination, Keyboard]);
 const productsSwiper = new Swiper(".products-swiper", {
   //slidesPerView: 2.5,
@@ -59,7 +59,7 @@ productsSwiper.on("slideChange", function () {
   }
 });
 
-//insta-swiper
+//!insta-swiper
 Swiper.use([Navigation, Pagination, Keyboard, EffectCoverflow]);
 const instaSwiper = new Swiper(".insta-swiper", {
   slidesPerView: "auto",
@@ -69,6 +69,7 @@ const instaSwiper = new Swiper(".insta-swiper", {
   speed: 1000,
   centeredSlides: true,
   loop: true,
+
   coverflowEffect: {
     rotate: 0,
     stretch: -70,
@@ -87,7 +88,7 @@ const instaSwiper = new Swiper(".insta-swiper", {
   },
 });
 
-//new-products swiper
+//!new-products swiper
 Swiper.use([Navigation, Pagination, Keyboard]);
 const newProductsSwiper = new Swiper(".new-products-swiper", {
   slidesPerView: "auto",
@@ -108,4 +109,38 @@ const newProductsSwiper = new Swiper(".new-products-swiper", {
     clickable: true,
     dynamicBullets: false,
   },
+});
+
+//!catalog swiper
+const catalogSliders = document.querySelectorAll(".catalog-swiper");
+catalogSliders.forEach((slider) => {
+  Swiper.use([Navigation, Pagination, Keyboard]);
+  const catalogSliders = new Swiper(slider, {
+    slidesPerView: "auto",
+    slidesPerGroup: 1,
+    speed: 700,
+    loop: false,
+
+    navigation: {
+      nextEl: slider.previousElementSibling.querySelector(".catalog-next"),
+      prevEl: slider.previousElementSibling.querySelector(".catalog-prev"),
+    },
+  });
+
+  const slides = slider.querySelectorAll(".catalog-slide");
+  if (slides.length <= 3) {
+    slider.previousElementSibling.querySelector(".slider-btns").remove();
+  }
+
+  if (slides.length == 2) {
+    slides.forEach((item) => {
+      item.style.width = "50%";
+    });
+  }
+
+  if (slides.length == 1) {
+    slides.forEach((item) => {
+      item.style.width = "100%";
+    });
+  }
 });

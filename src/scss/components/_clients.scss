@@ -40,14 +40,12 @@
 .clients-slider__wrapper {
   display: flex;
   align-items: center;
-  width: auto;
   transition: transform 0.25s linear;
 }
 
 .clients-list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 2.344vw;
   //margin: 0 -1.172vw;
 }
