@@ -79,18 +79,10 @@
   }
 }
 .footer-map {
-  position: relative;
   width: 30.677vw;
   height: 13vw;
   border-radius: 0.521vw;
   overflow: hidden;
-  &__icon {
-    position: absolute;
-    top: 5.2vw;
-    left: 14.8vw;
-    width: 2.083vw;
-    height: 2.917vw;
-  }
 }
 
 .copyright {
