@@ -3,7 +3,6 @@
   padding: 4.167vw 2.604vw 0;
   &__container {
     display: flex;
-    justify-content: space-between;
     padding-bottom: 3.7vw;
   }
 }
@@ -73,6 +72,7 @@
 .qr-code {
   height: 13.646vw;
   width: 10.677vw;
+  margin: 0 auto 0 8vw;
   img {
     width: 100%;
     height: 100%;
@@ -86,8 +86,8 @@
   overflow: hidden;
   &__icon {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 5.2vw;
+    left: 14.8vw;
     width: 2.083vw;
     height: 2.917vw;
   }
