@@ -199,7 +199,7 @@ const modal = new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]();
   \***************************************/
 /***/ (() => {
 
-// устанавливаем настройки для bottles
+//! устанавливаем настройки для bottles
 const optionsBottles = {
   // родитель целевого элемента - область просмотра
   root: null,
@@ -231,7 +231,7 @@ const observerBottles = new IntersectionObserver((entries, observer) => {
 // выбираем обьект слежения по классу
 observerBottles.observe(document.querySelector(".products"));
 
-// устанавливаем настройки для bottles
+//! устанавливаем настройки для bottles
 const optionsPartners = {
   // родитель целевого элемента - область просмотра
   root: null,
@@ -259,6 +259,45 @@ const observerPartners = new IntersectionObserver((entries, observer) => {
 }, optionsPartners);
 // выбираем обьект слежения по классу
 observerPartners.observe(document.querySelector(".partners"));
+
+//! устанавливаем настройки для секции feedback
+const optionsFeedback = {
+  // родитель целевого элемента - область просмотра
+  root: null,
+  // отступ снизу
+  rootMargin: "0px",
+  // процент пересечения - половина изображения
+  threshold: 0.1
+};
+// создаем наблюдатель
+const observerFeedback = new IntersectionObserver((entries, observer) => {
+  // для каждой записи-целевого элемента
+  entries.forEach(entry => {
+    // если элемент является наблюдаемым
+    const decorBarrel1 = document.querySelector(".barrel-decor1");
+    const decorBarrel2 = document.querySelector(".barrel-decor2");
+    const decorBarrelShadow = document.querySelectorAll(".barrel-decor__shadow");
+    if (entry.isIntersecting) {
+      // добавить ему CSS-класс
+      decorBarrel1.classList.add("animation-decor-barrel1");
+      decorBarrel2.classList.add("animation-decor-barrel2");
+    } else {
+      decorBarrel1.classList.remove("animation-decor-barrel1");
+      decorBarrel2.classList.remove("animation-decor-barrel2");
+    }
+    if (decorBarrel2.classList.contains("animation-decor-barrel2")) {
+      decorBarrelShadow.forEach(item => {
+        item.style.opacity = 0;
+      });
+    } else {
+      decorBarrelShadow.forEach(item => {
+        item.style.opacity = 1;
+      });
+    }
+  });
+}, optionsFeedback);
+// выбираем обьект слежения по классу
+observerFeedback.observe(document.querySelector(".feedback"));
 
 /***/ }),
 
@@ -326,7 +365,7 @@ productsSwiper.on("slideChange", function () {
 //insta-swiper
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Keyboard, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectCoverflow]);
 const instaSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".insta-swiper", {
-  slidesPerView: 5,
+  slidesPerView: "auto",
   effect: "coverflow",
   slidesPerGroup: 1,
   slidesOffsetBefore: 0,
@@ -335,11 +374,11 @@ const instaSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".insta-s
   loop: true,
   coverflowEffect: {
     rotate: 0,
-    stretch: 0,
+    stretch: -70,
     depth: 100,
     modifier: 1,
     slideShadows: false,
-    scale: 0.8
+    scale: 0.85
   },
   keyboard: {
     enabled: true,
@@ -348,6 +387,28 @@ const instaSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".insta-s
   navigation: {
     nextEl: ".insta-next",
     prevEl: ".insta-prev"
+  }
+});
+
+//new-products swiper
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Keyboard]);
+const newProductsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".new-products-swiper", {
+  slidesPerView: "auto",
+  slidesPerGroup: 1,
+  speed: 700,
+  loop: false,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true
+  },
+  navigation: {
+    nextEl: ".new-products-next",
+    prevEl: ".new-products-prev"
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: false
   }
 });
 
