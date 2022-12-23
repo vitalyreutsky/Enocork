@@ -76,7 +76,7 @@ const instaSwiper = new Swiper(".insta-swiper", {
     stretch: -70,
     depth: 100,
     modifier: 1,
-    slideShadows: false,
+    slideShadows: true,
     scale: 0.85,
   },
   keyboard: {
@@ -141,7 +141,7 @@ catalogSliders.forEach((slider) => {
 
   if (slides.length == 1) {
     slides.forEach((item) => {
-      item.style.width = "100%";
+      item.style.width = "94%";
     });
   }
 });
@@ -151,11 +151,11 @@ Swiper.use([Navigation, Pagination, Keyboard]);
 const menuSliders = new Swiper(".menu", {
   slidesPerView: "auto",
   slidesPerGroup: 1,
-  centeredSlides: true,
+  centeredSlides: false,
   speed: 700,
-  loop: true,
-  //keyboard: {
-  //  enabled: true,
-  //  onlyInViewport: true,
-  //},
+  loop: false,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
 });

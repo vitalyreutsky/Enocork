@@ -11,6 +11,9 @@
     width: 59.6vw;
     margin: 0 auto;
   }
+
+  .modal {
+  }
 }
 
 .feedback-content {
@@ -18,6 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--main-red);
   &__form {
     position: relative;
     width: 100%;

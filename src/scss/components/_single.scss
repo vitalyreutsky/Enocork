@@ -132,6 +132,10 @@
     box-shadow: 0px 48px 57px rgba(25, 1, 52, 0.12);
   }
 
+  &__item {
+    width: fit-content;
+  }
+
   &__link {
     pointer-events: none;
     font-size: 1.25vw;
