@@ -1,5 +1,5 @@
 {
-  "css/main.css": "css/main-71878ba740.css",
+  "css/main.css": "css/main-5661d27525.css",
   "css/vendor.css": "css/vendor-7e24774643.css",
   "fonts/AlumniSans-Medium.woff2": "fonts/AlumniSans-Medium-fbc83f524c.woff2",
   "fonts/AlumniSans-Regular.woff2": "fonts/AlumniSans-Regular-983d8c6b73.woff2",
@@ -167,11 +167,12 @@
   "img/phone.svg": "img/phone-5ba3222bda.svg",
   "img/qr.png": "img/qr-7c36ba2745.png",
   "img/qr.webp": "img/qr-b8dea8ead4.webp",
-  "img/sprite.svg": "img/sprite-a9c5336da0.svg",
+  "img/sprite.svg": "img/sprite-6c280f79c9.svg",
   "img/svg/about1.svg": "img/svg/about1-c9c43ed43f.svg",
   "img/svg/about2.svg": "img/svg/about2-650bcfc112.svg",
   "img/svg/about3.svg": "img/svg/about3-4a6ee64440.svg",
   "img/svg/about4.svg": "img/svg/about4-3e04446b34.svg",
+  "img/svg/arrow.svg": "img/svg/arrow-a71e3a3c1c.svg",
   "img/svg/barrel.svg": "img/svg/barrel-484a788ce0.svg",
   "img/svg/bottle.svg": "img/svg/bottle-0bf4380d66.svg",
   "img/svg/check.svg": "img/svg/check-89c6e5ce79.svg",
@@ -189,5 +190,5 @@
   "img/svg/telegram.svg": "img/svg/telegram-3b638f9724.svg",
   "img/svg/whatsapp.svg": "img/svg/whatsapp-4447b5732a.svg",
   "img/user.svg": "img/user-72440b1d8b.svg",
-  "js/main.js": "js/main-ffae1fc2ca.js"
+  "js/main.js": "js/main-d5fca78a0b.js"
 }

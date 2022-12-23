@@ -14,4 +14,6 @@
 
 //!products-swiper
 
+//!show hide
+
 //!меняем z-index у шапки при наведении
