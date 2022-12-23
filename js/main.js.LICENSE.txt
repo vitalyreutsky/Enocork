@@ -1,0 +1,17 @@
+//! устанавливаем настройки для bottles
+
+//! устанавливаем настройки для partners
+
+//! устанавливаем настройки для секции feedback
+
+//!hero-swiper
+
+//!insta-swiper
+
+//!menu swiper
+
+//!new-products swiper
+
+//!products-swiper
+
+//!меняем z-index у шапки при наведении
