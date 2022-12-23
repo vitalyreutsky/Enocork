@@ -53,5 +53,30 @@ function addClassFade(e) {
   }
 }
 
-catalogMenu.addEventListener("mouseover", addClassFade);
-catalogMenu.addEventListener("mouseout", addClassFade);
+if (catalogMenu) {
+  catalogMenu.addEventListener("mouseover", addClassFade);
+  catalogMenu.addEventListener("mouseout", addClassFade);
+}
+
+//!show hide
+const btnInstruction = document.querySelector(".information-hide");
+const blockInstruction = document.querySelectorAll(".info-product");
+
+blockInstruction.forEach((block) => {
+  if (block.classList.contains("product-instruction")) {
+    btnInstruction.addEventListener("click", () => {
+      block.classList.toggle("show-instruction");
+      btnInstruction
+        .querySelector(".information-hide__btn")
+        .classList.toggle("btnInstructionRotate");
+
+      btnInstruction.querySelector(".information-hide__text").innerHTML =
+        btnInstruction.querySelector(".information-hide__text").innerHTML ===
+        "Показать"
+          ? (btnInstruction.querySelector(".information-hide__text").innerHTML =
+              "Скрыть")
+          : (btnInstruction.querySelector(".information-hide__text").innerHTML =
+              "Показать");
+    });
+  }
+});
