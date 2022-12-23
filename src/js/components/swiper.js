@@ -4,6 +4,7 @@ import Swiper, {
   Pagination,
   EffectFade,
   EffectCoverflow,
+  Autoplay,
 } from "swiper";
 
 //!hero-swiper
