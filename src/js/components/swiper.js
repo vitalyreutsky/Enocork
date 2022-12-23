@@ -145,3 +145,17 @@ catalogSliders.forEach((slider) => {
     });
   }
 });
+
+//!menu swiper
+Swiper.use([Navigation, Pagination, Keyboard]);
+const menuSliders = new Swiper(".menu", {
+  slidesPerView: "auto",
+  slidesPerGroup: 1,
+  centeredSlides: true,
+  speed: 700,
+  loop: true,
+  //keyboard: {
+  //  enabled: true,
+  //  onlyInViewport: true,
+  //},
+});

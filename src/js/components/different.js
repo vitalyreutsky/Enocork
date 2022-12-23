@@ -6,7 +6,7 @@ function setZindex(e) {
   }
 }
 
-const breadcrumbs = document.querySelector(".breadcrumbs");
+const breadcrumbs = document.querySelector(".breadcrumbs--category");
 if (breadcrumbs) {
   breadcrumbs.addEventListener("mouseover", setZindex);
   breadcrumbs.addEventListener("mouseout", setZindex);
@@ -41,3 +41,17 @@ labels.forEach((label) => {
     label.remove();
   }
 });
+
+//!меняем z-index у шапки при наведении
+const catalogMenu = document.querySelector(".menu__list");
+
+function addClassFade(e) {
+  if (e.type === "mouseover") {
+    document.querySelector(".header").style.zIndex = 0;
+  } else if (e.type === "mouseout") {
+    document.querySelector(".header").style.zIndex = 5;
+  }
+}
+
+catalogMenu.addEventListener("mouseover", addClassFade);
+catalogMenu.addEventListener("mouseout", addClassFade);
