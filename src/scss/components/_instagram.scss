@@ -2,21 +2,23 @@
   &__container {
     background-color: #272325;
     border-radius: 1.042vw;
-    overflow: hidden;
     padding: 4.3vw 3.125vw 1.3vw;
     position: relative;
+    overflow: hidden;
     &::before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
+      right: 0;
+      bottom: 0;
       width: 100%;
       height: 100%;
       background-image: url("../img/instagram-bg.png");
+      mix-blend-mode: multiply;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      mix-blend-mode: multiply;
     }
 
     &::after {
@@ -112,8 +114,4 @@
     height: 2.379vw;
     fill: var(--main-red);
   }
-}
-
-.insta-slide--opacity {
-  opacity: 0.6;
 }
