@@ -55,6 +55,7 @@
   }
   &__list {
     display: flex;
+    justify-content: center;
     gap: 2.604vw;
   }
 
@@ -79,7 +80,7 @@
     }
 
     &:last-child {
-      padding-right: 10vw;
+      padding-right: 5vw;
     }
   }
 

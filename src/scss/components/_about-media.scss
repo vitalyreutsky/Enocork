@@ -1,0 +1,48 @@
+@include tablet {
+  .about {
+    &__container {
+      border-radius: 2.604vw;
+    }
+  }
+
+  .about-descr {
+    width: 50%;
+
+    gap: 2.344vw;
+    padding: 6.641vw 2.865vw 9.115vw;
+    &__list {
+      gap: 2.734vw;
+      width: 100%;
+    }
+
+    &__btn {
+      width: 100%;
+      margin-top: 5vw;
+    }
+  }
+
+  .about-image--tablet {
+    display: none;
+  }
+  .about-image--mob {
+    display: block;
+  }
+
+  .about-item {
+    &__icon {
+      width: 5.859vw;
+      height: 5.859vw;
+      margin-right: 3.255vw;
+      svg {
+        width: 3.385vw;
+        height: 4.557vw;
+        transform: translateY(-6.144px);
+      }
+    }
+
+    &__text {
+      font-size: 2.083vw;
+      line-height: 3.125vw;
+    }
+  }
+}

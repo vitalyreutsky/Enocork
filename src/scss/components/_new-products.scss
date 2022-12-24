@@ -13,6 +13,9 @@
 
   &__slide {
     width: 14.2vw;
+    &:not(:last-child) {
+      margin-right: 1.302vw;
+    }
   }
 
   &__bg {
@@ -26,16 +29,13 @@
 
 .new-products-swiper {
   overflow: visible;
-  padding-right: 5vw;
   &__wrapper {
-    gap: 1.302vw;
     margin-bottom: 5vw;
   }
 
   .slider-btns {
     position: static;
     justify-content: flex-end;
-    margin-right: -5vw;
   }
 
   .slider-prev,

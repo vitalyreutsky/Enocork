@@ -1,0 +1,55 @@
+@include tablet {
+  .partners {
+    &__container {
+      border-radius: 2.604vw;
+    }
+
+    .btn-primary {
+      width: 100%;
+    }
+  }
+
+  .partners-block {
+    &__descr {
+      width: 50%;
+      padding: 6.51vw 3.906vw 7vw;
+    }
+
+    &__title {
+      margin-bottom: 3.255vw;
+    }
+
+    &__text {
+      font-size: 2.083vw;
+      line-height: 3.125vw;
+      margin-bottom: 5.078vw;
+    }
+
+    &__animation {
+      justify-content: flex-start;
+    }
+
+    &__animation-image {
+      display: none;
+    }
+
+    &__animation-text {
+      font-size: 2.083vw;
+      line-height: 3.125vw;
+      gap: 5.078vw;
+      width: 100%;
+    }
+
+    &__red {
+      width: 50%;
+      &::after {
+        height: 33.464vw;
+      }
+    }
+
+    &__red-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

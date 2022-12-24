@@ -4,6 +4,7 @@
   right: 3.125vw;
   display: flex;
   align-items: center;
+  gap: 1.042vw;
   z-index: 1;
 }
 
@@ -36,12 +37,3 @@
     }
   }
 }
-
-.slider-prev {
-  margin-right: 1.042vw;
-}
-
-//.swiper-button-disabled {
-//  opacity: 0.3;
-//  pointer-events: none;
-//}

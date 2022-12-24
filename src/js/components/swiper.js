@@ -12,7 +12,7 @@ Swiper.use([Navigation, Pagination, Keyboard, EffectFade]);
 const heroSwiper = new Swiper(".hero-swiper", {
   slidesPerView: "auto",
   slidesPerGroup: 1,
-  speed: 1000,
+  speed: 700,
   loop: true,
   effect: "fade",
   keyboard: {
@@ -35,13 +35,12 @@ const heroSwiper = new Swiper(".hero-swiper", {
 Swiper.use([Navigation, Pagination, Keyboard]);
 const productsSwiper = new Swiper(".products-swiper", {
   //slidesPerView: 2.5,
-  slidesPerView: "auto",
-  slidesPerGroup: 1,
-  spaceBetween: 0,
   allowTouchMove: true,
-  centeredSlides: true,
+  slidesPerView: "auto",
+  spaceBetween: 0,
   speed: 1000,
   initialSlide: 1,
+  centeredSlides: true,
 
   loop: false,
   keyboard: {
@@ -51,6 +50,10 @@ const productsSwiper = new Swiper(".products-swiper", {
   navigation: {
     nextEl: ".products-next",
     prevEl: ".products-prev",
+  },
+  breakpoints: {
+    600: {},
+    1200: {},
   },
 });
 
@@ -71,14 +74,6 @@ const instaSwiper = new Swiper(".insta-swiper", {
   centeredSlides: true,
   loop: true,
 
-  coverflowEffect: {
-    rotate: 0,
-    stretch: -70,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-    scale: 0.85,
-  },
   keyboard: {
     enabled: true,
     onlyInViewport: true,
@@ -87,15 +82,34 @@ const instaSwiper = new Swiper(".insta-swiper", {
     nextEl: ".insta-next",
     prevEl: ".insta-prev",
   },
+  breakpoints: {
+    600: {
+      coverflowEffect: {
+        rotate: 0,
+        stretch: -50,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+        scale: 0.85,
+      },
+    },
+    1200: {
+      coverflowEffect: {
+        rotate: 0,
+        stretch: -70,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+        scale: 0.85,
+      },
+    },
+  },
 });
 
 //!new-products swiper
 Swiper.use([Navigation, Pagination, Keyboard]);
 const newProductsSwiper = new Swiper(".new-products-swiper", {
-  slidesPerView: "auto",
-  slidesPerGroup: 1,
   speed: 700,
-  loop: false,
   keyboard: {
     enabled: true,
     onlyInViewport: true,
@@ -110,6 +124,16 @@ const newProductsSwiper = new Swiper(".new-products-swiper", {
     clickable: true,
     dynamicBullets: false,
   },
+  breakpoints: {
+    768: {
+      slidesPerView: "auto",
+      spaceBetween: 0,
+    },
+    1200: {
+      slidesPerView: "auto",
+      loop: false,
+    },
+  },
 });
 
 //!catalog swiper
@@ -118,7 +142,6 @@ catalogSliders.forEach((slider) => {
   Swiper.use([Navigation, Pagination, Keyboard]);
   const catalogSliders = new Swiper(slider, {
     slidesPerView: "auto",
-    slidesPerGroup: 1,
     speed: 700,
     loop: false,
 

@@ -144,7 +144,6 @@
   }
 
   &__wrapper {
-    gap: 1.302vw;
     margin-left: 2vw;
   }
 }
@@ -153,6 +152,9 @@
   width: 22.3vw;
   height: auto;
   overflow: hidden;
+  &:not(:last-child) {
+    margin-right: 1.302vw;
+  }
   &__image {
     height: 10vw;
     overflow: hidden;
@@ -187,7 +189,7 @@
   }
 
   &:last-child {
-    padding-right: 10vw;
+    padding-right: 5vw;
   }
 
   &:hover .catalog-slide__name {

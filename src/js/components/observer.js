@@ -99,11 +99,13 @@ if (sectionFeedback) {
 
       if (decorBarrel2.classList.contains("animation-decor-barrel2")) {
         decorBarrelShadow.forEach((item) => {
-          item.style.opacity = 0;
+          item.style.opacity = 1;
+          item.style.visibility = "visible";
         });
       } else {
         decorBarrelShadow.forEach((item) => {
-          item.style.opacity = 1;
+          item.style.opacity = 0;
+          item.style.visibility = "visible";
         });
       }
     });

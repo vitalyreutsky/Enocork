@@ -1,0 +1,86 @@
+@include tablet {
+  .footer {
+    padding: 9.375vw 3.9vw 0vw;
+    &__container {
+      padding-bottom: 2.995vw;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 5.859vw;
+      grid-row-gap: 1.255vw;
+    }
+  }
+
+  .footer-left {
+    height: fit-content;
+    gap: 2.995vw;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .footer-center {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .footer-logo {
+    width: 44.922vw;
+    transform: translateX(0);
+  }
+
+  .footer-connect {
+    flex-direction: column;
+    gap: 2.083vw;
+  }
+
+  .footer-btn {
+    width: 100%;
+  }
+  .footer-mail {
+    font-size: 2.344vw;
+    line-height: 2.865vw;
+    gap: 1.302vw;
+    svg {
+      width: 3.385vw;
+      height: 3.125vw;
+    }
+  }
+
+  .footer-nav {
+    &__list {
+      gap: 4.036vw;
+    }
+
+    &__link {
+      font-size: 1.823vw;
+      line-height: 2.841vw;
+    }
+  }
+
+  .qr-code {
+    height: 100%;
+    width: 26vw;
+    margin: 0 auto -5vw;
+    img {
+      object-fit: contain;
+    }
+  }
+  .footer-map {
+    grid-area: 1 / 2 / 3 / 3;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.302vw;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .copyright {
+    padding: 3.125vw 0;
+    border-top: 0.13vw solid rgba(#909090, 0.1);
+
+    p {
+      font-size: 1.823vw;
+      line-height: 2.604vw;
+    }
+  }
+}

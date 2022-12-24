@@ -1,0 +1,144 @@
+@include tablet {
+  //!products
+  .products {
+    &__container {
+      border-radius: 2.604vw;
+      padding: 7.161vw 3.9vw;
+    }
+
+    &__wrapper {
+      padding: 5vw 0 1vw;
+    }
+
+    .slider-prev,
+    .slider-next {
+      border-color: var(--text-black);
+      svg {
+        fill: var(--text-black);
+      }
+    }
+  }
+
+  //products-descr
+  .products-descr {
+    padding-left: 0;
+
+    &--mob {
+      display: block;
+
+      .products-descr__content {
+        padding: 0;
+      }
+    }
+
+    &__content {
+      gap: 2.604vw;
+      padding: 0;
+      border-radius: 0;
+    }
+
+    &__title {
+      br {
+        display: none;
+      }
+    }
+
+    &__text {
+      width: 54vw;
+      font-size: 2.604vw;
+      line-height: 3.906vw;
+    }
+  }
+
+  //products swiper
+  .products-swiper {
+    &__slide {
+      width: 40vw;
+      transform: translateX(-22vw);
+      &:first-child {
+        width: 0 !important;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    &__content {
+      padding-top: 15vw;
+    }
+
+    &__top {
+      width: 26vw;
+      height: 30vw;
+      margin: 0 auto 4vw;
+    }
+
+    &__circle {
+      width: 26vw;
+      height: 20vw;
+    }
+
+    &__wrapper {
+      img {
+        transform: translateY(-10vw);
+        height: 27vw;
+      }
+    }
+
+    &__circle-red {
+      width: 26vw;
+      height: 20vw;
+    }
+
+    &__bottom {
+      gap: 2.083vw;
+      transform: translate(15%, 15%);
+    }
+
+    &__title {
+      font-size: 5.208vw;
+      line-height: 5vw;
+    }
+
+    &__list {
+      gap: 0.6vw;
+    }
+
+    &__item {
+      font-size: 2.083vw;
+      line-height: 3.125vw;
+    }
+
+    .slider-btns {
+      position: absolute;
+      right: 3vw;
+      bottom: 0;
+    }
+  }
+
+  .products-swiper__slide.swiper-slide-active .products-swiper__content {
+    transform: translate(0, 0);
+  }
+
+  .products-swiper__slide.swiper-slide-active .products-swiper__bottom {
+    transform: translate(0.5vw);
+  }
+
+  .products-swiper__slide.swiper-slide-active .products-swiper__wrapper img {
+    width: auto;
+    height: 42vw;
+    transform: translate(-0.65vw, -15vw);
+  }
+
+  .products-swiper__slide.swiper-slide-active .products-swiper__circle {
+    width: 38.542vw;
+    height: 27.604vw;
+    transform: translate(0.5vw, -2vw);
+  }
+
+  .products-swiper__slide.swiper-slide-active .products-swiper__circle-red {
+    width: 38.542vw;
+    height: 27.604vw;
+    top: -0.8vw;
+    left: -0.8vw;
+  }
+}

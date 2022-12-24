@@ -1,0 +1,75 @@
+@include tablet {
+  .instagram {
+    &__container {
+      border-radius: 2.604vw;
+      padding: 10.026vw 3.9vw 5.078vw;
+
+      &::after {
+        top: 22.8vw;
+        right: 22.1vw;
+        width: 27vw;
+        height: 27vw;
+        border: 0.5vw solid #a12b4e;
+        backdrop-filter: blur(0.326vw);
+
+        border-radius: 2.604vw;
+      }
+    }
+  }
+
+  .iphone {
+    top: 5vw;
+    left: 1vw;
+    width: 37.76vw;
+    height: 51.953vw;
+  }
+
+  .insta-swiper {
+    transform: translateX(10vw);
+
+    &__wrapper {
+      margin-bottom: 43.039px;
+    }
+
+    &__title {
+      margin-bottom: 10vw;
+      transform: translateX(3.1vw);
+      font-size: 6.51vw;
+      line-height: 5.208vw;
+    }
+
+    &__slide {
+      width: 22.526vw;
+      height: 22.526vw;
+      border-radius: 1.953vw;
+
+      img {
+        filter: drop-shadow(0vw 0vw 4.948vw rgba(0, 0, 0, 0.31));
+      }
+    }
+
+    &__text {
+      font-size: 1.823vw;
+      line-height: 2.865vw;
+      width: 35.156vw;
+      margin: 0 auto 8.203vw;
+      transform: translateX(4.1vw);
+    }
+
+    &__bottom {
+      transform: translateX(-10vw);
+    }
+  }
+
+  .insta-link {
+    gap: 2.734vw;
+    &__title {
+      font-size: 3.385vw;
+      line-height: 4.297vw;
+    }
+    svg {
+      width: 5.99vw;
+      height: 5.99vw;
+    }
+  }
+}

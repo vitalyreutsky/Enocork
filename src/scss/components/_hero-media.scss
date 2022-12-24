@@ -1,0 +1,45 @@
+@include tablet {
+  //!hero
+  .hero {
+    padding-top: 12vw;
+    &__container {
+      border-radius: 2.604vw;
+    }
+
+    &__title {
+      font-size: 14.323vw;
+      line-height: 13.021vw;
+    }
+
+    &__subtitle {
+      font-size: 5.208vw;
+      line-height: 7.813vw;
+      right: 33vw;
+    }
+
+    &__text {
+      font-size: 4.427vw;
+      line-height: 5.208vw;
+    }
+  }
+
+  .hero {
+    &-bg {
+      &::after {
+        height: 35vw;
+      }
+    }
+
+    &-content {
+      width: 100%;
+      height: fit-content;
+      top: 100%;
+      transform: translateY(-100%);
+    }
+
+    &-content__wrapper {
+      padding: 7.813vw 3.9vw 15vw;
+      gap: 5.078vw;
+    }
+  }
+}

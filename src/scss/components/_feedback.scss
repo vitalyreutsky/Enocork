@@ -11,9 +11,6 @@
     width: 59.6vw;
     margin: 0 auto;
   }
-
-  .modal {
-  }
 }
 
 .feedback-content {
@@ -123,6 +120,8 @@
   background: rgba(0, 0, 0, 0.9);
   filter: blur(75px);
   transition: all 1s ease-out;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .barrel-decor__shadow1 {

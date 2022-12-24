@@ -1,0 +1,77 @@
+@include tablet {
+  //!container
+  .container {
+    margin: 0 auto;
+    max-width: 91vw;
+  }
+
+  //!main offest
+  .main-offset {
+    padding-bottom: 3.906vw;
+  }
+
+  //!pagination
+  .swiper-pagination-bullet {
+    width: 2.214vw;
+    height: 0.781vw;
+    border-radius: 1.953vw;
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 0.6vw);
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 6.901vw;
+    height: 0.781vw;
+    border-radius: 1.953vw;
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 5.3vw;
+    right: auto;
+    left: 3.9vw;
+  }
+
+  //!navigation
+  .slider-btns {
+    position: absolute;
+    bottom: 3vw;
+    right: 3.125vw;
+    display: flex;
+    align-items: center;
+    gap: 2.604vw;
+    z-index: 1;
+  }
+
+  .slider-prev,
+  .slider-next {
+    width: 6.25vw;
+    height: 6.25vw;
+    svg {
+      width: 2.734vw;
+      height: 2.734vw;
+    }
+  }
+
+  //!btns
+  .btn-primary {
+    width: 31.25vw;
+    height: 5.99vw;
+    border-radius: 6.901vw;
+    font-size: 2.344vw;
+    line-height: 2.865vw;
+    span {
+      font-size: 2.344vw;
+      line-height: 2.865vw;
+    }
+  }
+
+  //!title
+  .page-title {
+    font-size: 8.464vw;
+    line-height: 7.161vw;
+  }
+}

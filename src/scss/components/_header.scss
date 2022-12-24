@@ -44,8 +44,15 @@
     height: auto;
   }
 
+  &__logo-mob {
+    display: none;
+  }
+
   &__btn {
     margin-right: 4.5vw;
+    svg {
+      display: none;
+    }
   }
 }
 
@@ -66,6 +73,10 @@
       }
     }
   }
+
+  &__list-mob {
+    display: none;
+  }
 }
 
 .lang {
@@ -82,4 +93,12 @@
   span {
     font-size: 0.729vw;
   }
+}
+
+.dis-offset {
+  padding-right: 17px !important;
+}
+
+.burger {
+  display: none;
 }
