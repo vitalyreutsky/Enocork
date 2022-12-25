@@ -116,9 +116,10 @@
     &__list-wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       width: 53.776vw;
+      min-height: 100vh;
       padding: 15vh 0 0;
 
       background-color: var(--light-color);

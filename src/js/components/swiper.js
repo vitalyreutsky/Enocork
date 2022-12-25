@@ -83,7 +83,7 @@ const instaSwiper = new Swiper(".insta-swiper", {
     prevEl: ".insta-prev",
   },
   breakpoints: {
-    600: {
+    0: {
       coverflowEffect: {
         rotate: 0,
         stretch: -50,
@@ -125,7 +125,7 @@ const newProductsSwiper = new Swiper(".new-products-swiper", {
     dynamicBullets: false,
   },
   breakpoints: {
-    768: {
+    0: {
       slidesPerView: "auto",
       spaceBetween: 0,
     },
