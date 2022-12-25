@@ -2,6 +2,13 @@
 const catalogMenu = document.querySelector(".menu");
 const catalogMenuItems = document.querySelectorAll(".menu__item");
 
+catalogMenuItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    item.style.cursor = "grab";
+    item.querySelector(".menu__link").style.cursor = "grab";
+  });
+});
+
 if (catalogMenu) {
   document.addEventListener("click", (e) => {
     const catalogMenu = document.querySelector(".menu__list");
