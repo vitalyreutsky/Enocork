@@ -51,10 +51,6 @@ const productsSwiper = new Swiper(".products-swiper", {
     nextEl: ".products-next",
     prevEl: ".products-prev",
   },
-  breakpoints: {
-    600: {},
-    1200: {},
-  },
 });
 
 productsSwiper.on("slideChange", function () {

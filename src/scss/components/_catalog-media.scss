@@ -1,0 +1,150 @@
+@include tablet {
+  .catalog {
+    padding-top: 38.4px;
+    overflow: hidden;
+
+    .breadcrumbs {
+      margin: 0;
+      margin-bottom: 23.04px;
+
+      .breadcrumbs__link {
+        svg {
+          width: 5.376px;
+          height: 5.376px;
+        }
+      }
+    }
+  }
+
+  .catalog-content {
+    height: 135.936px;
+
+    border-radius: 8.003px;
+    margin-bottom: 15.997px;
+    &__descr {
+      width: 50%;
+      padding: 21.504px 14.592px;
+    }
+
+    &__title {
+      font-size: 36.004px;
+      line-height: 32.003px;
+    }
+
+    &__image {
+      width: 50%;
+      height: 100%;
+    }
+  }
+
+  .catalog-products__sliders {
+    gap: 3.906vw;
+  }
+
+  .product-descr {
+    padding: 2.604vw;
+    width: 100%;
+
+    box-shadow: 19px -82px 40px rgba(0, 0, 0, 0.04);
+    border-radius: 0vw 0vw 2.604vw 2.604vw;
+
+    &__name {
+      gap: 0;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 3.385vw;
+      line-height: 3.473vw;
+      align-items: center;
+    }
+
+    &__bottom {
+      gap: 3.906vw;
+      align-items: center;
+    }
+
+    &__btn {
+      font-size: 1.823vw;
+      line-height: 1.693vw;
+      width: 20.052vw;
+      height: 5.2vw;
+    }
+  }
+
+  .catalog-product__slider {
+    border-radius: 2.604vw;
+    flex-direction: column-reverse;
+    overflow: hidden;
+
+    .slider-btns {
+      gap: 1.953vw;
+    }
+
+    .slider-prev,
+    .slider-next {
+      width: 5.208vw;
+      height: 5.208vw;
+      svg {
+        width: 1.953vw;
+        height: 1.302vw;
+      }
+    }
+  }
+
+  .catalog-swiper {
+    padding: 0;
+    &::after {
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%);
+      height: 110%;
+      width: 12.76vw;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &__wrapper {
+      padding: 2.604vw;
+      margin-left: 0;
+    }
+  }
+
+  .catalog-slide {
+    width: 39.453vw;
+
+    &:not(:last-child) {
+      margin-right: 3.255vw;
+    }
+    &__image {
+      height: 16vw;
+
+      img {
+        transform: scale(1.02);
+      }
+    }
+
+    &__item {
+      border: 0.13vw solid rgba(0, 0, 0, 0.3);
+      border-radius: 1.302vw;
+    }
+
+    &__name {
+      padding: 4.167vw 2.604vw;
+      background-color: var(--light-color);
+
+      h3 {
+        font-size: 3.125vw;
+        line-height: 2.604vw;
+      }
+    }
+
+    &:last-child {
+      padding-right: 5.1vw;
+    }
+  }
+}
