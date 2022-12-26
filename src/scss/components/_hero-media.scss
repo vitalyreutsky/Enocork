@@ -38,8 +38,9 @@
     }
 
     &-content__wrapper {
-      padding: 7.813vw 3.9vw 15vw;
-      gap: 5.078vw;
+      padding: 7.813vh 3.9vw 15vh;
+      justify-content: space-between;
+      gap: 0;
     }
   }
 }

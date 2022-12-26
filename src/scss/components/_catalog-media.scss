@@ -1,39 +1,38 @@
 @include tablet {
   .catalog {
-    padding-top: 38.4px;
-    overflow: hidden;
+    padding-top: 11vw;
 
     .breadcrumbs {
-      margin: 0;
       margin-bottom: 23.04px;
 
       .breadcrumbs__link {
+        font-size: 1.823vw;
+        line-height: 2.344vw;
         svg {
-          width: 5.376px;
-          height: 5.376px;
+          width: 1.563vw;
+          height: 1.563vw;
         }
       }
     }
   }
 
   .catalog-content {
-    height: 135.936px;
+    height: 20vw;
 
-    border-radius: 8.003px;
-    margin-bottom: 15.997px;
+    border-radius: 2.604vw;
+    margin-bottom: 3.906vw;
     &__descr {
-      width: 50%;
-      padding: 21.504px 14.592px;
+      width: 100%;
+      padding: 2.8vw 3.255vw;
     }
 
     &__title {
-      font-size: 36.004px;
-      line-height: 32.003px;
+      font-size: 6.51vw;
+      line-height: 6.51vw;
     }
 
     &__image {
-      width: 50%;
-      height: 100%;
+      display: none;
     }
   }
 
