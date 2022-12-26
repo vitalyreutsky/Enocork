@@ -1,0 +1,71 @@
+@include tablet {
+  .category {
+    padding-top: 11vw;
+
+    .breadcrumbs {
+      .breadcrumbs__link {
+        font-size: 1.823vw;
+        line-height: 2.344vw;
+        svg {
+          width: 1.563vw;
+          height: 1.563vw;
+        }
+      }
+    }
+
+    .catalog-content {
+      min-height: 20vw;
+
+      border-radius: 2.604vw;
+      margin-bottom: 3.906vw;
+
+      &__download {
+        gap: 1.172vw;
+
+        svg {
+          width: 1.563vw;
+          height: 2.083vw;
+        }
+
+        a {
+          font-size: 2.344vw;
+          line-height: 3.385vw;
+          border-bottom: 1px dashed #ffffff7d;
+        }
+      }
+
+      &__descr {
+        width: 100%;
+        padding: 2.8vw 3.255vw;
+      }
+
+      &__title {
+        font-size: 6.51vw;
+        line-height: 6.51vw;
+      }
+
+      &__image {
+        display: none;
+      }
+    }
+  }
+
+  .category-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.953vw;
+    grid-row-gap: 1.953vw;
+  }
+
+  .catalog-slide:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .catalog-slide__item {
+    border-radius: 2.604vw;
+  }
+
+  .catalog-slide__image {
+    height: 22vw;
+  }
+}

@@ -3,8 +3,6 @@
     padding-top: 11vw;
 
     .breadcrumbs {
-      margin-bottom: 23.04px;
-
       .breadcrumbs__link {
         font-size: 1.823vw;
         line-height: 2.344vw;
@@ -17,7 +15,7 @@
   }
 
   .catalog-content {
-    height: 20vw;
+    min-height: 20vw;
 
     border-radius: 2.604vw;
     margin-bottom: 3.906vw;
