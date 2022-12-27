@@ -44,3 +44,42 @@
     }
   }
 }
+
+@include mobile {
+  .hero {
+    padding-top: 23vw;
+    &__container {
+      border-radius: 5.333vw;
+    }
+
+    &__title {
+      font-size: 13.333vw;
+      line-height: 13.021vw;
+    }
+
+    &__subtitle {
+      font-size: 5.333vw;
+      line-height: 9.6vw;
+      right: 25vw;
+    }
+
+    &__text {
+      font-size: 4.8vw;
+      line-height: 6.933vw;
+    }
+  }
+
+  .hero {
+    &-bg {
+      &::after {
+        height: 70%;
+      }
+    }
+
+    &-content__wrapper {
+      padding: 11.733vh 5.333vw 15vh;
+      justify-content: space-between;
+      gap: 0;
+    }
+  }
+}

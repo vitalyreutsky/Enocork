@@ -47,8 +47,9 @@
     }
 
     &__input {
-      padding: 0 0 2vw 0;
+      padding: 1vw 0 2vw 0;
       background-size: 2vw;
+      background-position: 0 0.5vw;
 
       &::placeholder {
         margin-left: 0;
