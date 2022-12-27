@@ -34,7 +34,6 @@ const heroSwiper = new Swiper(".hero-swiper", {
 //!products-swiper
 Swiper.use([Navigation, Pagination, Keyboard]);
 const productsSwiper = new Swiper(".products-swiper", {
-  //slidesPerView: 2.5,
   allowTouchMove: true,
   slidesPerView: "auto",
   spaceBetween: 0,
@@ -82,6 +81,16 @@ const instaSwiper = new Swiper(".insta-swiper", {
     0: {
       coverflowEffect: {
         rotate: 0,
+        stretch: -30,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+        scale: 0.85,
+      },
+    },
+    600: {
+      coverflowEffect: {
+        rotate: 0,
         stretch: -50,
         depth: 100,
         modifier: 1,
@@ -124,10 +133,12 @@ const newProductsSwiper = new Swiper(".new-products-swiper", {
     0: {
       slidesPerView: "auto",
       spaceBetween: 0,
+      loop: true,
     },
+
     1200: {
       slidesPerView: "auto",
-      loop: false,
+      loop: true,
     },
   },
 });

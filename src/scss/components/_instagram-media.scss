@@ -73,3 +73,71 @@
     }
   }
 }
+
+@include mobile {
+  .instagram {
+    &__container {
+      border-radius: 5.333vw;
+      padding: 16.533vw 5.6vw;
+
+      &::after {
+        top: 38vw;
+        right: 12.1vw;
+        width: 67.2vw;
+        height: 67.2vw;
+        border: 0.533vw solid #a12b4e;
+
+        border-radius: 5.333vw;
+      }
+    }
+  }
+
+  .iphone {
+    display: none;
+  }
+
+  .insta-swiper {
+    transform: translateX(0);
+
+    &__wrapper {
+      margin-bottom: 7vw;
+    }
+
+    &__title {
+      margin-bottom: 15vw;
+      transform: translateX(0);
+      font-size: 13.333vw;
+      line-height: 10.667vw;
+    }
+
+    &__slide {
+      width: 59.2vw;
+      height: 59.2vw;
+      border-radius: 4vw;
+    }
+
+    &__text {
+      font-size: 3.733vw;
+      line-height: 5.867vw;
+      width: 100%;
+      margin: 10vw auto 13.333vw;
+      transform: translateX(0);
+    }
+
+    &__bottom {
+      transform: translateX(0);
+    }
+  }
+
+  .insta-link {
+    gap: 4.267vw;
+    &__title {
+      font-size: 6.4vw;
+      line-height: 8.8vw;
+    }
+    svg {
+      width: 8.533vw;
+      height: 8.533vw;
+    }
+  }
+}
