@@ -153,9 +153,8 @@
   width: 22.3vw;
   height: auto;
   overflow: hidden;
-  &:not(:last-child) {
-    margin-right: 1.302vw;
-  }
+  margin-right: 1.302vw;
+
   &__image {
     height: 10vw;
     overflow: hidden;
@@ -190,7 +189,7 @@
   }
 
   &:last-child {
-    padding-right: 5vw;
+    padding-right: 3vw;
   }
 
   &:hover .catalog-slide__name {
@@ -203,4 +202,8 @@
   &:hover .catalog-slide__image img {
     transform: scale(1.3);
   }
+}
+
+.hide-swiper-btns {
+  display: none !important;
 }

@@ -80,3 +80,11 @@ blockInstruction.forEach((block) => {
     });
   }
 });
+
+//!кнопка back без перезагрузки
+const breadcrumbsBack = document.querySelector(".breadcrumbs__link-back");
+if (breadcrumbsBack) {
+  breadcrumbsBack.addEventListener("click", () => {
+    window.history.back();
+  });
+}
