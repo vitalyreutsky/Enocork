@@ -40,22 +40,20 @@
     overflow: auto;
   }
 
-  &__item {
-  }
-
   &__header {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.302vw 0;
-    border-bottom: 1px solid #d9d9d9;
     z-index: 1;
+    border-bottom: 1px solid #d9d9d9;
+
     svg {
       width: 2.604vw;
       height: 2.604vw;
       fill: var(--text-black);
-      transform: rotate(-180deg);
+      transform: rotate(-360deg);
       transition: transform 0.3s ease-out;
     }
   }
@@ -104,7 +102,7 @@
   padding: 1.302vw;
   svg {
     fill: var(--light-color);
-    transform: rotate(-360deg);
+    transform: rotate(-180deg);
   }
 }
 
@@ -120,5 +118,59 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@include mobile {
+  .accordion {
+    &__close {
+      top: 6vw;
+      right: 3.9vw;
+      width: 6vw;
+      height: 6vw;
+    }
+
+    &__wrapper {
+      height: calc(100% - 23vw);
+    }
+
+    &__items {
+      padding: 2.667vw;
+    }
+
+    &__header {
+      padding: 2vw 0;
+      border-bottom: 0.267vw solid #d9d9d9;
+      svg {
+        width: 3vw;
+        height: 3vw;
+      }
+    }
+
+    &__header-title {
+      font-size: 5.333vw;
+      line-height: 6.4vw;
+      border-radius: 2.667vw;
+    }
+
+    &__body {
+      transform: translateY(-5vw);
+    }
+
+    &__body-content {
+      padding: 8.133vw 2.667vw 6vw;
+      border-radius: 2.667vw;
+      gap: 4vw;
+    }
+
+    &__body-item {
+      font-size: 4.267vw;
+      line-height: 5.333vw;
+    }
+  }
+
+  .accordion-header--active {
+    border-radius: 2.667vw;
+    padding: 2vw;
   }
 }
