@@ -16,6 +16,10 @@
   background-repeat: no-repeat;
   top: 1.198vw;
   right: 1.198vw;
+
+  &--white {
+    display: none;
+  }
 }
 
 .modal-content {
