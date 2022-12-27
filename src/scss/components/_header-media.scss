@@ -292,13 +292,13 @@
       padding: 8vw 0;
       &__container {
         &::after {
-          top: 0.5vw;
+          top: 0.4vw;
           right: -10.5vw;
           width: 27vw;
           height: 22.6vw;
         }
         &::before {
-          top: 0.5vw;
+          top: 0.4vw;
           left: -10.5vw;
           width: 27vw;
           height: 22.6vw;
@@ -358,6 +358,10 @@
       .feedback-content {
         border-radius: 5.333vw 5.333vw 0vw 0vw;
         padding: 11.733vw 6.933vw;
+
+        &__form {
+          padding: 0 !important;
+        }
 
         &__title {
           font-size: 8.534vw;

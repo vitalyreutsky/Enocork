@@ -2,6 +2,7 @@
   padding-top: 5vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
   &__container {
     height: 100%;
     border-radius: 1.042vw;
@@ -46,6 +47,7 @@
   }
 
   &-bg {
+    overflow: hidden;
     height: 100%;
     width: 100%;
     position: relative;
