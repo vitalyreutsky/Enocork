@@ -55,13 +55,13 @@
   }
   &__list {
     display: flex;
-    gap: 2.604vw;
   }
 
   &__item {
-    width: auto;
+    width: fit-content;
     position: relative;
     padding: 0.7vw 0;
+    margin-right: 2.5vw;
     cursor: pointer;
     &::after {
       content: "";
@@ -76,10 +76,6 @@
     }
     &:last-child::after {
       display: none;
-    }
-
-    &:last-child {
-      padding-right: 5vw;
     }
   }
 
@@ -110,6 +106,7 @@
     &__item:hover &__link {
       background: var(--main-red);
       color: var(--light-color);
+      cursor: grab;
     }
   }
 }
@@ -335,6 +332,7 @@
 .information-hide {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.042vw;
   margin: 0 auto;
   padding-top: 1.5vw;

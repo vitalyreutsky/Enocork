@@ -192,15 +192,17 @@
     padding-right: 3vw;
   }
 
-  &:hover .catalog-slide__name {
-    background-color: var(--text-black);
-    h3 {
-      color: var(--light-color);
+  @include for-desktop {
+    &:hover .catalog-slide__name {
+      background-color: var(--text-black);
+      h3 {
+        color: var(--light-color);
+      }
     }
-  }
 
-  &:hover .catalog-slide__image img {
-    transform: scale(1.3);
+    &:hover .catalog-slide__image img {
+      transform: scale(1.3);
+    }
   }
 }
 

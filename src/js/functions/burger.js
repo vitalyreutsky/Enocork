@@ -68,7 +68,7 @@ if (window.innerWidth < 1200) {
         item?.addEventListener("click", () => {
           disableScroll();
 
-          accordionMenu.classList.toggle("accordion--active");
+          accordionMenu.classList.add("accordion--active");
 
           if (visuallySpanMenu == visuallySpanAccordion) {
             link.classList.add("accordion-header--active");

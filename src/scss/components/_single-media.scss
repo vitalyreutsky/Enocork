@@ -51,11 +51,13 @@
       height: 100%;
     }
     &__list {
-      gap: 3.906vw;
+      gap: 0;
     }
 
     &__item {
       padding: 0;
+      width: fit-content;
+      margin-right: 4vw;
 
       &::after {
         top: 50%;
@@ -266,12 +268,9 @@
       width: 20vw;
     }
 
-    &__list {
-      gap: 3vw;
-    }
-
     &__item {
       padding: 0;
+      margin-right: 3.5vw;
 
       &::after {
         width: 0.267vw;

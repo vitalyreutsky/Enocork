@@ -120,6 +120,7 @@
 
       img {
         transform: scale(1.02);
+        object-position: unset;
       }
     }
 
@@ -281,6 +282,9 @@
 
     &__image {
       height: 37vw !important;
+      img {
+        object-position: top;
+      }
     }
 
     &__item {
