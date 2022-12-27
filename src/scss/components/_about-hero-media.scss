@@ -34,3 +34,37 @@
     }
   }
 }
+
+@include mobile {
+  .about-hero {
+    padding-top: 23vw;
+
+    &__container {
+      border-radius: 5.333vw;
+
+      &::after {
+        height: 80%;
+      }
+    }
+
+    &__content {
+      gap: 3.2vw;
+      padding: 0 5vw 13vh;
+    }
+
+    &__title {
+      font-size: 18.667vw;
+      line-height: 16vw;
+    }
+
+    &__subtitle {
+      font-size: 6.51vw;
+      line-height: 9.6vw;
+    }
+
+    &__text {
+      font-size: 4.427vw;
+      line-height: 6.4vw;
+    }
+  }
+}
