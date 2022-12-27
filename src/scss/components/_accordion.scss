@@ -1,0 +1,124 @@
+.accordion {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: auto;
+  display: none;
+  background: linear-gradient(
+      0deg,
+      rgba(28, 29, 27, 0.85),
+      rgba(28, 29, 27, 0.85)
+    ),
+    url(image.png);
+  z-index: 101;
+
+  &__close {
+    position: absolute;
+    top: 4vw;
+    right: 3.9vw;
+    width: 3vw;
+    height: 3vw;
+    fill: var(--light-color);
+  }
+
+  &__wrapper {
+    background: #f2f2f2;
+    height: calc(100% - 11vw);
+    width: 100%;
+    overflow: auto;
+  }
+
+  &__items {
+    height: 100%;
+    padding: 1.302vw;
+    overflow: auto;
+  }
+
+  &__item {
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.302vw 0;
+    border-bottom: 1px solid #d9d9d9;
+    z-index: 1;
+    svg {
+      width: 2.604vw;
+      height: 2.604vw;
+      fill: var(--text-black);
+      transform: rotate(-180deg);
+      transition: transform 0.3s ease-out;
+    }
+  }
+
+  &__header-title {
+    font-family: var(--font-family-Alumni);
+    font-size: 3.906vw;
+    font-weight: 500;
+    line-height: 4.557vw;
+    border-radius: 2.604vw;
+  }
+
+  &__body {
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-2vw);
+    transition: max-height 0.3s linear;
+  }
+
+  &__body-content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-color);
+    padding: 2.995vw 1.302vw;
+    border-radius: 2.604vw;
+    gap: 1.953vw;
+  }
+
+  &__body-item {
+    font-weight: 300;
+    font-size: 3.125vw;
+    line-height: 4.427vw;
+  }
+}
+
+.accordion--active {
+  display: flex;
+  animation-name: accordion-fade;
+  animation-duration: 0.3s;
+}
+
+.accordion-header--active {
+  background-color: var(--main-red);
+  color: var(--light-color);
+  border-radius: 1.302vw;
+  padding: 1.302vw;
+  svg {
+    fill: var(--light-color);
+    transform: rotate(-360deg);
+  }
+}
+
+.accordion-body--active {
+  max-height: fit-content;
+  animation-name: fade;
+  animation-duration: 0.4s;
+}
+
+@keyframes accordion-fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -55,7 +55,6 @@
   }
   &__list {
     display: flex;
-    justify-content: center;
     gap: 2.604vw;
   }
 
@@ -277,6 +276,7 @@
 }
 .information-title {
   font-family: var(--font-family-Alumni);
+  text-transform: uppercase;
   font-weight: 500;
   font-size: 3.646vw;
   line-height: 4.167vw;
@@ -286,7 +286,7 @@
 .information-wrapper {
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
-  padding: 1.198vw 0vw 2.2vw;
+  padding: 2vw 0vw;
 }
 
 .information-content {
@@ -380,7 +380,7 @@
 }
 
 .show-instruction {
-  display: block;
+  display: flex;
   animation-name: fade;
   animation-duration: 0.3s;
 }

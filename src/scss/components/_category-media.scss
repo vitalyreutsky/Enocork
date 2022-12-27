@@ -13,8 +13,25 @@
       }
     }
 
+    .catalog-content__title {
+      gap: 0.651vw;
+      align-items: flex-start;
+      h1 {
+        font-size: 6.51vw;
+        line-height: 6.51vw;
+      }
+      h3 {
+        display: block;
+        font-family: var(--font-family-Helvetica);
+        font-weight: 300;
+        text-transform: none;
+        font-size: 2.344vw;
+        line-height: 3.125vw;
+      }
+    }
+
     .catalog-content {
-      min-height: 20vw;
+      min-height: 25vw;
 
       border-radius: 2.604vw;
       margin-bottom: 3.906vw;
@@ -58,7 +75,7 @@
   }
 
   .catalog-slide:not(:last-child) {
-    margin-right: 0;
+    margin-right: 2.604vw;
   }
 
   .catalog-slide__item {

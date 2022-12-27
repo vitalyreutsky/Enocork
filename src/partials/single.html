@@ -3,8 +3,9 @@
     <nav class="swiper menu">
       <ul class="swiper-wrapper menu__list list-reset">
         <li class="swiper-slide menu__item">
-          <a href="#" class="menu__link"
-            >Укупорка
+          <a href="#" class="menu__link">
+            Укупорка
+            <span class="visually-hidden">Укупорка</span>
             <svg>
               <use xlink:href="img/sprite.svg#arrow"></use>
             </svg>
@@ -43,6 +44,7 @@
         <li class="swiper-slide menu__item">
           <a href="#" class="menu__link"
             >Бекмес
+            <span class="visually-hidden">Бекмес</span>
             <svg>
               <use xlink:href="img/sprite.svg#arrow"></use>
             </svg>
@@ -50,15 +52,19 @@
           <div class="sub-menu">
             <ul class="sub-menu__list list-reset">
               <li class="sub-menu__item">
-                <a href="#" class="sub-menu__link">Белый Бекмес</a>
+                <a href="#" class="sub-menu__link"><span>Белый Бекмес</span></a>
               </li>
 
               <li class="sub-menu__item">
-                <a href="#" class="sub-menu__link">Красный Бекмес</a>
+                <a href="#" class="sub-menu__link"
+                  ><span>Красный Бекмес</span></a
+                >
               </li>
 
               <li class="sub-menu__item">
-                <a href="#" class="sub-menu__link">Деионизат Бекмес</a>
+                <a href="#" class="sub-menu__link"
+                  ><span>Деионизат Бекмес</span></a
+                >
               </li>
             </ul>
           </div>
@@ -67,6 +73,7 @@
         <li class="swiper-slide menu__item">
           <a href="#" class="menu__link"
             >Выдержка вин и коньяков
+            <span class="visually-hidden">Выдержка вин и коньяков</span>
             <svg>
               <use xlink:href="img/sprite.svg#arrow"></use>
             </svg>
@@ -103,6 +110,7 @@
         <li class="swiper-slide menu__item">
           <a href="#" class="menu__link"
             >Дрожжи и Продукты для виноделия
+            <span class="visually-hidden">Дрожжи и Продукты для виноделия</span>
             <svg>
               <use xlink:href="img/sprite.svg#arrow"></use>
             </svg>
@@ -155,6 +163,7 @@
         <li class="swiper-slide menu__item">
           <a href="#" class="menu__link"
             >Оборудование для виноделия
+            <span class="visually-hidden">Оборудование для виноделия</span>
             <svg>
               <use xlink:href="img/sprite.svg#arrow"></use>
             </svg>
@@ -185,6 +194,8 @@
         </li>
       </ul>
     </nav>
+
+    @include('../partials/accordion.html')
 
     <div class="breadcrumbs">
       <ul class="breadcrumbs__list list-reset">

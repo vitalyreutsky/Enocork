@@ -15,6 +15,24 @@
     }
   }
 
+  .catalog-content__title {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    h1 {
+      text-transform: uppercase;
+      font-family: var(--font-family-Alumni);
+      color: var(--light-color);
+      font-weight: 500;
+      font-size: 4.688vw;
+      line-height: 4.167vw;
+    }
+    h3 {
+      display: none;
+    }
+  }
+
   .catalog-content {
     min-height: 17.188vw;
     &__descr {

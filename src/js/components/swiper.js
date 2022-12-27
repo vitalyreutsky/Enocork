@@ -169,7 +169,6 @@ catalogSliders.forEach((slider) => {
 Swiper.use([Navigation, Pagination, Keyboard]);
 const menuSliders = new Swiper(".menu", {
   slidesPerView: "auto",
-  slidesPerGroup: 1,
   centeredSlides: false,
   speed: 700,
   loop: false,
