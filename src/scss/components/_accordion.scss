@@ -41,7 +41,6 @@
 
   &__item {
     border-radius: 1.302vw;
-    overflow: hidden;
   }
 
   &__header {
@@ -111,6 +110,10 @@
 
 .accordion-item--active {
   background-color: var(--light-color);
+}
+
+.accordion-item-prev--active {
+  border-bottom: none !important;
 }
 
 .accordion-body--active {

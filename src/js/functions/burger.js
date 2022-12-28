@@ -64,6 +64,7 @@ if (window.innerWidth < 1200) {
         const visuallySpanMenu = item.querySelector("span").textContent;
         const visuallySpanAccordion = link.querySelector("span").textContent;
         const accordionBody = link.nextElementSibling;
+        const accordionItem = link.parentElement;
 
         item?.addEventListener("click", () => {
           disableScroll();
@@ -74,11 +75,20 @@ if (window.innerWidth < 1200) {
             link.classList.add("accordion-header--active");
             accordionBody.classList.add("accordion-body--active");
             accordionBody.parentElement.classList.add("accordion-item--active");
+
+            if (accordionItem.previousElementSibling) {
+              accordionItem.previousElementSibling
+                .querySelector(".accordion__header")
+                .classList.add("accordion-item-prev--active");
+            }
           } else {
             link.classList.remove("accordion-header--active");
             accordionBody.classList.remove("accordion-body--active");
             accordionBody.parentElement.classList.remove(
               "accordion-item--active"
+            );
+            accordionBody.parentElement.classList.remove(
+              "accordion-item-prev--active"
             );
           }
         });
@@ -105,6 +115,18 @@ if (window.innerWidth < 1200) {
           accordionBody.parentElement.classList?.toggle(
             "accordion-item--active"
           );
+
+          if (accordionItem.previousElementSibling) {
+            document
+              .querySelector(".accordion-item-prev--active")
+              .classList?.remove("accordion-item-prev--active");
+            accordionItem.previousElementSibling
+              .querySelector(".accordion__header")
+              .classList?.remove("accordion-item-prev--active");
+            accordionItem.previousElementSibling
+              .querySelector(".accordion__header")
+              .classList?.toggle("accordion-item-prev--active");
+          }
         });
 
         //закрываем menu accordion
