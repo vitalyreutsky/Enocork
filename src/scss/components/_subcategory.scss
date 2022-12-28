@@ -39,4 +39,8 @@
 .subcategory-btn {
   width: 25.104vw;
   margin: 0 auto;
+  color: var(--text-black);
+  span {
+    color: var(--text-black);
+  }
 }
