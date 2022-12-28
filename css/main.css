@@ -3359,6 +3359,9 @@ html {
   -webkit-transform: translateY(-2vw);
   -ms-transform: translateY(-2vw);
   transform: translateY(-2vw);
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
   -webkit-transition: max-height 0.3s linear;
   -o-transition: max-height 0.3s linear;
   transition: max-height 0.3s linear;
