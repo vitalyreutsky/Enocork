@@ -75,6 +75,10 @@
     &:last-child::after {
       display: none;
     }
+
+    //&:last-child {
+    //  padding-right: 10vw;
+    //}
   }
 
   &__link {

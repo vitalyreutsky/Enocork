@@ -39,8 +39,16 @@
 .subcategory-btn {
   width: 25.104vw;
   margin: 0 auto;
-  color: var(--text-black);
+  transition: all 0.2s ease-out;
+
   span {
     color: var(--text-black);
+    transition: all 0.2s ease-out;
+  }
+
+  @include for-desktop {
+    &:hover span {
+      color: var(--light-color);
+    }
   }
 }

@@ -1,7 +1,8 @@
 .breadcrumbs {
   margin-bottom: 1.2vw;
+  width: fit-content;
   position: relative;
-  z-index: 3;
+  z-index: 1;
   &__list {
     display: flex;
   }
