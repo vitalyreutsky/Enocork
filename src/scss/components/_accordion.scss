@@ -36,8 +36,12 @@
 
   &__items {
     height: 100%;
-    padding: 1.302vw;
-    overflow: auto;
+    padding: 2vw;
+  }
+
+  &__item {
+    border-radius: 1.302vw;
+    overflow: hidden;
   }
 
   &__header {
@@ -69,7 +73,6 @@
   &__body {
     max-height: 0;
     overflow: hidden;
-    transform: translateY(-2vw);
     transition: max-height 0.3s linear;
   }
 
@@ -106,6 +109,10 @@
   }
 }
 
+.accordion-item--active {
+  background-color: var(--light-color);
+}
+
 .accordion-body--active {
   max-height: fit-content;
   animation-name: fade;
@@ -132,10 +139,11 @@
 
     &__wrapper {
       height: calc(100% - 23vw);
+      padding: 2vw;
     }
 
     &__items {
-      padding: 2.667vw;
+      padding: 1vw;
     }
 
     &__header {
@@ -147,18 +155,18 @@
       }
     }
 
+    &__item {
+      border-radius: 2.667vw;
+    }
+
     &__header-title {
       font-size: 5.333vw;
       line-height: 6.4vw;
       border-radius: 2.667vw;
     }
 
-    &__body {
-      transform: translateY(-5vw);
-    }
-
     &__body-content {
-      padding: 8.133vw 2.667vw 6vw;
+      padding: 4vw 2.667vw;
       border-radius: 2.667vw;
       gap: 4vw;
     }

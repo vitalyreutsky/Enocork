@@ -73,9 +73,13 @@ if (window.innerWidth < 1200) {
           if (visuallySpanMenu == visuallySpanAccordion) {
             link.classList.add("accordion-header--active");
             accordionBody.classList.add("accordion-body--active");
+            accordionBody.parentElement.classList.add("accordion-item--active");
           } else {
             link.classList.remove("accordion-header--active");
             accordionBody.classList.remove("accordion-body--active");
+            accordionBody.parentElement.classList.remove(
+              "accordion-item--active"
+            );
           }
         });
 
@@ -91,6 +95,16 @@ if (window.innerWidth < 1200) {
             .classList?.remove("accordion-body--active");
           accordionBody.classList?.remove("accordion-body--active");
           accordionBody.classList?.toggle("accordion-body--active");
+
+          document
+            .querySelector(".accordion-item--active")
+            .classList?.remove("accordion-item--active");
+          accordionBody.parentElement.classList?.remove(
+            "accordion-item--active"
+          );
+          accordionBody.parentElement.classList?.toggle(
+            "accordion-item--active"
+          );
         });
 
         //закрываем menu accordion
