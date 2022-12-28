@@ -3447,7 +3447,7 @@ html {
     padding: 2.667vw;
   }
   .accordion__header {
-    padding: 0;
+    padding: 2vw 0;
     border-bottom: 0.267vw solid #d9d9d9;
   }
   .accordion__header svg {
@@ -3460,9 +3460,9 @@ html {
     border-radius: 2.667vw;
   }
   .accordion__body {
-    -webkit-transform: translateY(-5vw);
-    -ms-transform: translateY(-5vw);
-    transform: translateY(-5vw);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
   }
   .accordion__body-content {
     padding: 8.133vw 2.667vw 6vw;
