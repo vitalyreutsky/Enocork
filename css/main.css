@@ -670,6 +670,7 @@ html {
 }
 .modal-feedback .form__textarea {
   width: 100%;
+  font-family: var(--font-family-Helvetica);
   height: 7.604vw;
   padding: 0.885vw 0.99vw;
   color: #737272;
@@ -6511,7 +6512,7 @@ html {
   }
   .modal-content__form {
     width: 50%;
-    padding: 9.635vw 3.776vw;
+    padding: 7vw 3.776vw;
   }
   .form {
     width: 100%;
