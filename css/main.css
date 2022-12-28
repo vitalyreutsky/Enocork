@@ -3314,7 +3314,6 @@ html {
 }
 .accordion__item {
   border-radius: 1.302vw;
-  overflow: hidden;
 }
 .accordion__header {
   position: relative;
