@@ -88,3 +88,31 @@ if (breadcrumbsBack) {
     window.history.back();
   });
 }
+
+//показать больше
+const showMore = document.querySelector(".show-more");
+const showMoreText = showMore.querySelector("span");
+const productsLength = document.querySelectorAll(".new-products__item").length;
+
+if (showMore) {
+  showMore.addEventListener("click", () => {
+    showMoreText.textContent =
+      showMoreText.textContent === "Показать еще"
+        ? (showMoreText.textContent = "Скрыть")
+        : (showMoreText.textContent = "Показать еще");
+
+    const arr = Array.from(
+      document.querySelector(".subcategory-products__wrapper").children
+    );
+
+    const visItems = arr.slice(0);
+
+    visItems.forEach((el) => {
+      el.classList.toggle("is-visible");
+    });
+  });
+
+  if (productsLength <= 10) {
+    showMore.remove();
+  }
+}

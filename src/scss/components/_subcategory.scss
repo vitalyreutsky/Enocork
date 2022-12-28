@@ -1,0 +1,42 @@
+.subcategory {
+  padding-top: 6vw;
+}
+
+.subcategory-products {
+  background-color: var(--light-color);
+  border-radius: 1.042vw;
+  padding: 2.083vw 3.385vw;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.563vw;
+    margin-bottom: 1.563vw;
+  }
+
+  .new-products__slide {
+    width: 100%;
+
+    &:nth-child(n + 11) {
+      display: none;
+    }
+  }
+
+  .new-products__slide.is-visible {
+    display: block;
+    animation-name: fade;
+    animation-duration: 0.1s;
+  }
+
+  .new-products__slide:not(:last-child) {
+    margin-right: 0;
+  }
+}
+.subcategory-title {
+  margin-bottom: 2.083vw;
+}
+
+.subcategory-btn {
+  width: 25.104vw;
+  margin: 0 auto;
+}
