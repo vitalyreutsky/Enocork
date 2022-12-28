@@ -3403,6 +3403,10 @@ html {
   background-color: var(--light-color);
 }
 
+.accordion-item-prev--active {
+  border-bottom: none !important;
+}
+
 .accordion-body--active {
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
@@ -6660,8 +6664,11 @@ html {
   }
   .modal-feedback .modal-close--white {
     display: block;
-    width: 8vw;
-    height: 8vw;
+    width: 6vw;
+    height: 6vw;
+    top: 5vw;
+    right: 5vw;
+    fill: var(--light-color);
   }
   .modal-feedback .form__textarea {
     height: 38.933vw;
