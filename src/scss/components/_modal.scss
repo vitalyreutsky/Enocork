@@ -175,6 +175,11 @@
     &__btn {
       color: var(--text-black);
       border-color: var(--text-black);
+      @include for-desktop {
+        &:hover {
+          color: var(--light-color);
+        }
+      }
     }
 
     &__text {

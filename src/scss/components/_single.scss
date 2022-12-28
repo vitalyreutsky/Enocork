@@ -60,7 +60,7 @@
     position: relative;
     padding: 0.7vw 0;
     margin-right: 2.5vw;
-    cursor: pointer;
+    cursor: grab;
     &::after {
       content: "";
       position: absolute;
@@ -76,9 +76,9 @@
       display: none;
     }
 
-    //&:last-child {
-    //  padding-right: 10vw;
-    //}
+    &:last-child {
+      margin-right: 10vw;
+    }
   }
 
   &__link {
@@ -121,6 +121,7 @@
   padding: 1.5vw 0 0 0;
   min-width: 30vw;
   z-index: 1;
+
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
