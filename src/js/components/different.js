@@ -91,10 +91,10 @@ if (breadcrumbsBack) {
 
 //показать больше
 const showMore = document.querySelector(".show-more");
-const showMoreText = showMore.querySelector("span");
 const productsLength = document.querySelectorAll(".new-products__item").length;
 
 if (showMore) {
+  const showMoreText = showMore.querySelector("span");
   showMore.addEventListener("click", () => {
     showMoreText.textContent =
       showMoreText.textContent === "Показать еще"
