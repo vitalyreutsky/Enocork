@@ -3447,7 +3447,7 @@ html {
     padding: 2.667vw;
   }
   .accordion__header {
-    padding: 2vw 0;
+    padding: 0;
     border-bottom: 0.267vw solid #d9d9d9;
   }
   .accordion__header svg {
