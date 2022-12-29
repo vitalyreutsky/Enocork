@@ -19,13 +19,17 @@ if (sectionBottles) {
       const bottlesIcon4 = document.querySelector(".bottle4");
       if (entry.isIntersecting) {
         // добавить ему CSS-класс
-        bottlesIcon2.classList.add("bottle-animation2");
-        bottlesIcon3.classList.add("bottle-animation3");
-        bottlesIcon4.classList.add("bottle-animation4");
+        if (bottlesIcon2 && bottlesIcon3 && bottlesIcon4) {
+          bottlesIcon2.classList.add("bottle-animation2");
+          bottlesIcon3.classList.add("bottle-animation3");
+          bottlesIcon4.classList.add("bottle-animation4");
+        }
       } else {
-        bottlesIcon2.classList.remove("bottle-animation2");
-        bottlesIcon3.classList.remove("bottle-animation3");
-        bottlesIcon4.classList.remove("bottle-animation4");
+        if (bottlesIcon2 && bottlesIcon3 && bottlesIcon4) {
+          bottlesIcon2.classList.remove("bottle-animation2");
+          bottlesIcon3.classList.remove("bottle-animation3");
+          bottlesIcon4.classList.remove("bottle-animation4");
+        }
       }
     });
   }, optionsBottles);

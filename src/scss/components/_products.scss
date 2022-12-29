@@ -8,7 +8,6 @@
 
   &__wrapper {
     position: relative;
-    display: flex;
 
     height: 100%;
     padding: 5vw 0 1vw;
@@ -138,12 +137,13 @@
 .products-swiper {
   &__slide {
     width: 35vw;
-    &:first-child {
-      width: 36vw !important;
-      left: 7vw;
-      padding-top: 3vw;
-      padding-left: 9vw;
-    }
+  }
+
+  .swiper-slide__descr {
+    width: 36vw !important;
+    left: 7vw;
+    padding-top: 3vw;
+    padding-left: 9vw;
   }
 
   &__content {
@@ -231,6 +231,10 @@
   &__item {
     font-size: 1.146vw;
     line-height: 1.823vw;
+  }
+
+  &__btn--mob {
+    display: none;
   }
 
   .slider-btns {

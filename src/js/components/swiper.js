@@ -35,12 +35,7 @@ const heroSwiper = new Swiper(".hero-swiper", {
 Swiper.use([Navigation, Pagination, Keyboard]);
 const productsSwiper = new Swiper(".products-swiper", {
   allowTouchMove: true,
-  slidesPerView: "auto",
-  spaceBetween: 0,
   speed: 1000,
-  initialSlide: 1,
-  centeredSlides: true,
-
   loop: false,
   keyboard: {
     enabled: true,
@@ -50,13 +45,44 @@ const productsSwiper = new Swiper(".products-swiper", {
     nextEl: ".products-next",
     prevEl: ".products-prev",
   },
+  breakpoints: {
+    0: {
+      slidesPerView: "auto",
+      centeredSlides: true,
+      initialSlide: 0,
+    },
+    600: {
+      slidesPerView: 1.8,
+      loop: false,
+      centeredSlides: true,
+    },
+    1200: {
+      slidesPerView: "auto",
+      centeredSlides: true,
+      loop: false,
+      initialSlide: 1,
+    },
+  },
 });
 
-productsSwiper.on("slideChange", function () {
-  if (productsSwiper.activeIndex == 0) {
-    productsSwiper.slideTo(1);
+const breakpointMax = window.matchMedia("(max-width:1200px)");
+const breakpointMin = window.matchMedia("(min-width:1200px)");
+
+if (breakpointMax.matches === true) {
+  const slideProducts = document.querySelector(".swiper-slide__descr");
+  if (slideProducts) {
+    slideProducts.remove();
+    productsSwiper.update();
   }
-});
+}
+
+if (breakpointMin.matches === true) {
+  productsSwiper.on("slideChange", function () {
+    if (productsSwiper.activeIndex == 0) {
+      productsSwiper.slideTo(1);
+    }
+  });
+}
 
 //!insta-swiper
 Swiper.use([Navigation, Pagination, Keyboard, EffectCoverflow]);
