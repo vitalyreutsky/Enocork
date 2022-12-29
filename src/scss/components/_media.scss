@@ -526,9 +526,12 @@
 
   //products swiper
   .products-swiper {
+    right: 19vw;
+    overflow: visible;
     &__slide {
       width: 40vw;
       transform: translateX(-19vw);
+      transform: translateX(0);
     }
     .swiper-slide__descr {
       display: none;
@@ -582,7 +585,7 @@
 
     .slider-btns {
       position: absolute;
-      right: 3vw;
+      right: -19vw;
       bottom: 0;
     }
   }
@@ -2208,10 +2211,12 @@
   //!products swiper
   .products-swiper {
     margin-bottom: 5vw;
+    right: 13vw;
     &__slide {
       width: 50vw;
       margin-right: 3vw;
       transform: translateX(-12vw);
+      transform: translateX(0);
     }
 
     &__content {
@@ -2279,8 +2284,8 @@
 
     .slider-btns {
       position: absolute;
-      right: 3vw;
-      bottom: 47vw;
+      right: -9vw;
+      bottom: 50vw;
     }
   }
 
