@@ -1035,9 +1035,6 @@ html {
 }
 .products__wrapper {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 100%;
   padding: 5vw 0 1vw;
   overflow: hidden;
@@ -1325,6 +1322,9 @@ html {
 .products-swiper__item {
   font-size: 1.146vw;
   line-height: 1.823vw;
+}
+.products-swiper__btn--mob {
+  display: none;
 }
 .products-swiper .slider-btns {
   position: absolute;
@@ -5761,11 +5761,14 @@ html {
     font-size: 4.267vw;
     line-height: 6.4vw;
   }
+  .products-swiper {
+    margin-bottom: 5vw;
+  }
   .products-swiper__slide {
     width: 45vw;
-    -webkit-transform: translateX(-18vw);
-    -ms-transform: translateX(-18vw);
-    transform: translateX(-18vw);
+    -webkit-transform: translateX(-17vw);
+    -ms-transform: translateX(-17vw);
+    transform: translateX(-17vw);
   }
   .products-swiper__content {
     padding-top: 30vw;
@@ -5815,12 +5818,18 @@ html {
     line-height: 6.4vw;
   }
   .products-swiper__btn {
-    width: 79vw;
+    display: none;
+  }
+  .products-swiper__btn--mob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
   }
   .products-swiper .slider-btns {
     position: absolute;
     right: 3vw;
-    bottom: 64vw;
+    bottom: 47vw;
   }
   .products-swiper__slide.swiper-slide-active .products-swiper__bottom {
     -webkit-transform: translate(0);
