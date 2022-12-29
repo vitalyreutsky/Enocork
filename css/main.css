@@ -1199,7 +1199,7 @@ html {
 .products-swiper__slide {
   width: 35vw;
 }
-.products-swiper__slide:first-child {
+.products-swiper .swiper-slide__descr {
   width: 36vw !important;
   left: 7vw;
   padding-top: 3vw;
@@ -2639,15 +2639,6 @@ html {
 }
 .catalog-slide__image {
   height: 10vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
   overflow: hidden;
 }
 .catalog-slide__image img {
@@ -2657,6 +2648,8 @@ html {
   -webkit-transform: scale(1.02);
   -ms-transform: scale(1.02);
   transform: scale(1.02);
+  -o-object-position: top;
+  object-position: top;
   -webkit-transition: all 0.35s linear;
   -o-transition: all 0.35s linear;
   transition: all 0.35s linear;
@@ -4277,15 +4270,7 @@ html {
   }
   .products-swiper__slide {
     width: 40vw;
-    -webkit-transform: translateX(-9vw);
-    -ms-transform: translateX(-9vw);
-    transform: translateX(-9vw);
-  }
-  .products-swiper__slide:first-child {
-    width: auto;
-    left: 0;
-    padding-top: 0;
-    padding-left: 0;
+    -webkit-transform: translateX(-19vw);
   }
   .products-swiper .swiper-slide__descr {
     display: none;
@@ -5765,18 +5750,30 @@ html {
     margin-bottom: 5vw;
   }
   .products-swiper__slide {
-    width: 45vw;
-    -webkit-transform: translateX(-17vw);
-    -ms-transform: translateX(-17vw);
-    transform: translateX(-17vw);
+    width: 50vw;
+    margin-right: 3vw;
+    -webkit-transform: translateX(-12vw);
   }
   .products-swiper__content {
     padding-top: 30vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
   .products-swiper__top {
     width: 100%;
     height: 18.667vw;
     margin: 0 auto 7vw;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
   .products-swiper__circle {
     width: 26vw;
@@ -6371,10 +6368,6 @@ html {
   }
   .catalog-slide__image {
     height: 37vw !important;
-  }
-  .catalog-slide__image img {
-    -o-object-position: top;
-    object-position: top;
   }
   .catalog-slide__item {
     border: 0.267vw solid rgba(0, 0, 0, 0.3);

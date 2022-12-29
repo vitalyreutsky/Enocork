@@ -589,6 +589,7 @@ const productsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".prod
     },
     600: {
       slidesPerView: 1.8,
+      loop: false,
       centeredSlides: true
     },
     1200: {
@@ -602,8 +603,11 @@ const productsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".prod
 const breakpointMax = window.matchMedia("(max-width:1200px)");
 const breakpointMin = window.matchMedia("(min-width:1200px)");
 if (breakpointMax.matches === true) {
-  document.querySelector(".swiper-slide__descr").remove();
-  productsSwiper.update();
+  const slideProducts = document.querySelector(".swiper-slide__descr");
+  if (slideProducts) {
+    slideProducts.remove();
+    productsSwiper.update();
+  }
 }
 if (breakpointMin.matches === true) {
   productsSwiper.on("slideChange", function () {
