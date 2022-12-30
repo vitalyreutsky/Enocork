@@ -873,6 +873,7 @@ html {
 .hero__container {
   height: 100%;
   border-radius: 1.042vw;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   overflow: hidden;
 }
 .hero__title {
@@ -911,7 +912,6 @@ html {
   overflow: hidden;
   height: 100%;
   width: 100%;
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
   position: relative;
   z-index: 1;
 }
