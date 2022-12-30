@@ -910,6 +910,9 @@ html {
   height: 100%;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
+.hero-wrapper {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
 .hero-bg {
   overflow: hidden;
   height: 100%;
